@@ -12,7 +12,8 @@ const AddButton = () => {
                 height: 100,
                 borderRadius: '100%',
                 justifyContent: 'center',
-                alignItems: 'center'
+                alignItems: 'center',
+                zIndex: 1
             }}>
             <Image
                 source={(require('../assets/plus.png'))}

@@ -30,7 +30,7 @@ export default function Header({setSearchResults, data}) {
     const [text, setText] = useState(null)
 
     const onStarPress = () => {
-        Alert.alert('Favorites', 'Awaiting Alain\'s Favorites Page', 
+        Alert.alert('Favorites', 'Awaiting Favorites Page', 
         [
             {
                 text: 'Cancel',
@@ -77,12 +77,12 @@ export default function Header({setSearchResults, data}) {
                 </TouchableOpacity>
             </View>
             <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={{marginHorizontal: 10, overflow: "hidden"}}>
-                <FilterButton title="Environmental"/>
-                <FilterButton title="Education"/>
-                <FilterButton title="Wildfires"/>
-                <FilterButton title="Wildlife"/>
-                <FilterButton title="Natural Disasters"/>
-                <FilterButton title="Terrorism"/>
+                <FilterButton title="Environmental" zoomId="1"/>
+                <FilterButton title="Education" zoomId="2"/>
+                <FilterButton title="Wildfires" zoomId="3"/>
+                <FilterButton title="Wildlife" zoomId="4"/>
+                <FilterButton title="Natural Disasters" zoomId="5"/>
+                <FilterButton title="Terrorism" zoomId="6"/>
             </ScrollView>
         </View>
     );
