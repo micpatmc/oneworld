@@ -11,6 +11,9 @@ export default function App() {
 
   return (
     <View style={styles.container}>
+      <Header />
+      <Map />
+      <AddButton />
       <Header setSearchResults={setSearchResults} data={data}/>
 
       { /* Determine whether to render map or search results */ }

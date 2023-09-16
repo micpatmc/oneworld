@@ -16,7 +16,7 @@ export default function Map() {
         // provider={PROVIDER_GOOGLE}
       >
         <Marker
-          onPress={() => {this.map.fitToSuppliedMarkers(['c1'])}}
+          // onPress={() => {this.map.fitToSuppliedMarkers(['c1'])}}
           coordinate={{
             latitude: 37,
             longitude: -120,
