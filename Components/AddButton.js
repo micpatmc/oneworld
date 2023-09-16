@@ -5,11 +5,11 @@ const AddButton = () => {
         <TouchableOpacity 
             style={{
                 position: 'absolute',
-                backgroundColor: '#0000FF',
+                backgroundColor: '#fff',
                 bottom: 50,
                 right: 25,
-                width: 100,
-                height: 100,
+                width: 80,
+                height: 80,
                 borderRadius: '100%',
                 justifyContent: 'center',
                 alignItems: 'center',
@@ -18,8 +18,8 @@ const AddButton = () => {
             <Image
                 source={(require('../assets/plus.png'))}
                 style={{
-                    width: 60,
-                    height: 60
+                    width: 40,
+                    height: 40
                 }}
             />
 

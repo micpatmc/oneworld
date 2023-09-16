@@ -1,5 +1,6 @@
-import { TouchableOpacity, Text, StyleSheet } from "react-native";
+import { TouchableOpacity, Text, StyleSheet, Image } from "react-native";
 import { markerZoom } from "./Map";
+import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 
 const styles = StyleSheet.create({
     filterButton: {
@@ -22,9 +23,10 @@ const styles = StyleSheet.create({
     },
 });
 
-export default function FilterButton({title, zoomId}) {
+export default function FilterButton({title, zoomId, imgInfo}) {
     return (
         <TouchableOpacity onPress={() => markerZoom({zoomId})} style={styles.filterButton}>
+            <FontAwesomeIcon icon={imgInfo} style={{right: 5}} size={ 25 } color={ 'black' } />
             <Text styles={styles.buttonText}>{title}</Text>
         </TouchableOpacity>
     );
