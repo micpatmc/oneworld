@@ -1,13 +1,39 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import { useState } from 'react';
 import Map from './Components/Map';
 import Header from './Components/Header';
+import { Card } from '@rneui/themed';
+import data from "./data.json"
 
 export default function App() {
+  const [searchResults, setSearchResults] = useState([])
+
   return (
     <View style={styles.container}>
-      <Header />
-      <Map />
+      <Header setSearchResults={setSearchResults} data={data}/>
+
+      { /* Determine whether to render map or search results */ }
+      {searchResults.length == 0
+        ? <Map />
+        : 
+        <ScrollView style={{width:'100%'}}>
+          {
+            searchResults.map((value, index) => {
+              return (
+                <Card wrapperStyle={styles.searchResult}>
+                  <Card.Title>{value.Name}</Card.Title>
+                  <Card.Divider />
+                  <View>
+                    
+                  </View>
+                </Card>
+              );
+            })
+          }
+        </ScrollView>
+      }
+
       <StatusBar style="auto" />
     </View>
   );
@@ -19,4 +45,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  searchResult: {
+    height: 200,
+  },
+  debug: {
+    borderWidth: 5,
+    borderColor: 'red'
+  }
 });

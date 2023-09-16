@@ -1,4 +1,4 @@
-import { Alert, ScrollView, StyleSheet, TouchableOpacity, View } from "react-native";
+import { Alert, ScrollView, StyleSheet, TouchableOpacity, View, Text } from "react-native";
 import { SearchBar } from "@rneui/themed";
 import { useState } from "react";
 import FilterButton from "./FilterButton";
@@ -15,14 +15,19 @@ const styles = StyleSheet.create({
     },
     searchArea: {
         flex:1,  
+        width: "100%",
         alignItems: 'center', 
         flexDirection: 'row',
         margin: 10,
     },
+    searchResult: {
+        borderColor: 'red',
+        borderWidth: 5,
+    }
 });
 
-export default function Header() {
-    const [text, setText] = useState('')
+export default function Header({setSearchResults, data}) {
+    const [text, setText] = useState(null)
 
     const onStarPress = () => {
         Alert.alert('Favorites', 'Awaiting Alain\'s Favorites Page', 
@@ -40,6 +45,19 @@ export default function Header() {
         );
     }
 
+    const handleSearch = (searchString) => {
+        const newSearchResults = data.filter((charity) => {
+            return charity.Name.toLowerCase().includes(searchString.toLowerCase());
+        });
+        setText(searchString);
+        // Ensure the empty string doesn't cause a filter
+        if (searchString == "") {
+            setSearchResults([]);
+        } else {
+            setSearchResults(newSearchResults);
+        }
+    }
+
     return (
         <View style={styles.header}>
             <View style={styles.searchArea}>
@@ -49,13 +67,13 @@ export default function Header() {
                     ref={search => this.search = search}
                     containerStyle = {{backgroundColor: 'none', borderTopWidth: 0, borderBottomWidth: 0}}
                     inputContainerStyle = {{ backgroundColor:'#d9d9d9' }}
-                    onChangeText={setText}
+                    onChangeText={handleSearch}
                     value={text}
                     placeholder="Search"
                     />
                 </View>
-                <TouchableOpacity onPress={onStarPress} style={{flex:1}}>
-                    <FontAwesomeIcon icon={ faStar } size={ 32 } color={'gold'} />
+                <TouchableOpacity onPress={ onStarPress } style={ {flex:1} }>
+                    <FontAwesomeIcon icon={ faStar } size={ 32 } color={ 'gold' } />
                 </TouchableOpacity>
             </View>
             <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={{marginHorizontal: 10, overflow: "hidden"}}>
