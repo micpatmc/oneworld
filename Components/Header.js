@@ -65,7 +65,18 @@ export default function Header({setSearchResults, data}) {
                     <SearchBar 
                     round={true} 
                     ref={search => this.search = search}
-                    containerStyle = {{backgroundColor: 'none', borderTopWidth: 0, borderBottomWidth: 0, paddingRight: 20, paddingLeft: 20}}
+                    containerStyle = 
+                    {{
+                        backgroundColor: 'none',
+                        borderTopWidth: 0,
+                        borderBottomWidth: 0,
+                        paddingRight: 20,
+                        paddingLeft: 20,
+                        shadowColor: '#171717',
+                        shadowOffset: {width: -2, height: 4},
+                        shadowOpacity: 0.1,
+                        shadowRadius: 5
+                    }}
                     inputContainerStyle = {{ backgroundColor:'#d9d9d9' }}
                     onChangeText={handleSearch}
                     value={text}
@@ -81,20 +92,24 @@ export default function Header({setSearchResults, data}) {
                         width: 90,
                         alignContent: 'center',
                         justifyContent: 'center',
-                        borderColor: "#808080",
-                        borderWidth: 2,
+                        backgroundColor: '#aaaaaa',
+                        borderColor: "#d9d9d9",
+                        borderWidth: 2.5,
+                        shadowOffset: {width: -2, height: 4},
+                        shadowOpacity: 0.1,
+                        shadowRadius: 5
                         }}
                     >
                     <FontAwesomeIcon icon={ faStar } style={{left: 6, bottom: 1}} size={ 32 } color={ 'gold' } />
                 </TouchableOpacity>
             </View>
             <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={{marginHorizontal: 10, overflow: "hidden"}}>
-                <FilterButton title="Environmental" imgInfo={faTree}/>
-                <FilterButton title="Education" imgInfo={faSchool}/>
-                <FilterButton title="Animal Relief" imgInfo={faDog}/>
-                <FilterButton title="Impoverished Areas" imgInfo={faHouseChimneyCrack}/>
-                <FilterButton title="Social Justice" imgInfo={faBalanceScale}/>
-                <FilterButton title="Medical" imgInfo={faMedkit}/>
+                <FilterButton title="Environmental" zoomId="1" imgInfo={faTree}/>
+                <FilterButton title="Education" zoomId="2" imgInfo={faSchool}/>
+                <FilterButton title="Animal Relief" zoomId="3" imgInfo={faDog}/>
+                <FilterButton title="Impoverished Areas" zoomId="4" imgInfo={faHouseChimneyCrack}/>
+                <FilterButton title="Social Justice" zoomId="5" imgInfo={faBalanceScale}/>
+                <FilterButton title="Medical" zoomId="6" imgInfo={faMedkit}/>
             </ScrollView>
         </View>
     );
