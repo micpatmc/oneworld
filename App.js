@@ -1,11 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import { Keyboard, ScrollView, StyleSheet, Text, TouchableWithoutFeedback, View} from 'react-native';
 import { useState } from 'react';
-import Map from './components/Map';
-import Header from './components/Header';
+import Map from './Components/Map';
+import Header from './Components/Header';
 import { Button, Card } from '@rneui/themed';
 import data from "./data.json"
-import AddButton from './components/AddButton'
+import AddButton from './Components/AddButton'
 
 export default function App() {
   const [searchResults, setSearchResults] = useState([])
