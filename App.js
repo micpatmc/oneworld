@@ -1,12 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import Map from './Components/Map';
-import Header from './Components/Header';
+import Map from './components/Map';
+import Header from './components/Header';
+import AddButton from './components/AddButton';
 
 export default function App() {
   return (
     <View style={styles.container}>
       <Header />
+      <AddButton />
       <Map />
       <StatusBar style="auto" />
     </View>

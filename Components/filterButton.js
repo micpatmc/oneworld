@@ -1,4 +1,5 @@
 import { TouchableOpacity, Text, StyleSheet } from "react-native";
+import { markerZoom } from "./Map";
 
 const styles = StyleSheet.create({
     filterButton: {
@@ -16,9 +17,9 @@ const styles = StyleSheet.create({
     }
 });
 
-export default function FilterButton({title}) {
+export default function FilterButton({title, zoomId}) {
     return (
-        <TouchableOpacity style={styles.filterButton}>
+        <TouchableOpacity onPress={() => markerZoom({zoomId})} style={styles.filterButton}>
             <Text styles={styles.buttonText}>{title}</Text>
         </TouchableOpacity>
     );
