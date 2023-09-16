@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View, Text, Image } from 'react-native';
 import MapView, { PROVIDER_GOOGLE, Marker, Callout } from 'react-native-maps';
 
 export default function Map() {
@@ -24,6 +24,20 @@ export default function Map() {
           title="Charity"
           description="Wildfires"
         >
+          <Callout tooltip>
+            <View>
+              <View style={styles.calloutBubble}>
+                <Text style={styles.calloutText}>dawdawdwd</Text>
+                <Text style={styles.calloutText}>Something else</Text>
+                {/* <Image  */}
+                  {/* style={styles.calloutImage} */}
+                  {/* source={require('../assets/pin.png')} */}
+                {/* /> */}
+              </View>
+              <View style={styles.arrowBorder}/>
+              <View style={styles.arrow}/>
+            </View>
+          </Callout>
         </Marker>
       </MapView>
     </View>
@@ -41,14 +55,24 @@ const styles = StyleSheet.create({
     height: '100%',
     zIndex: 100
   },
-  bubble: {
-    flexDirection: 'row',
+  calloutBubble: {
+    flexDirection: 'column',
     alignSelf: 'flex-start',
     backgroundColor: '#fff',
     borderRadius: 6,
   },
-  name: {
+  calloutText: {
+    textAlign: 'left',
     fontSize: 16,
     marginBottom: 5
+  },
+  arrowBorder: {
+
+  },
+  arrow: {
+
+  },
+  calloutImage: {
+
   }
 });

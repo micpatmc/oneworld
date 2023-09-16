@@ -1,7 +1,7 @@
 import { ScrollView, StyleSheet, View } from "react-native";
 import { SearchBar } from "@rneui/themed";
 import { useState } from "react";
-import FilterButton from "./filterButton";
+import FilterButton from "./FilterButton";
 
 const height_proportion = '20%';
 
