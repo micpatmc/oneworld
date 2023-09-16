@@ -1,23 +1,31 @@
 import { StatusBar } from 'expo-status-bar';
-import { Keyboard, ScrollView, StyleSheet, Text, TouchableWithoutFeedback, View} from 'react-native';
+import { Keyboard, ScrollView, StyleSheet, Text, TouchableWithoutFeedback, View, Animated } from 'react-native';
 import { useState } from 'react';
-import Map from './Components/Map';
-import Header from './Components/Header';
+import Map from './components/Map';
+import Header from './components/Header';
 import { Button, Card } from '@rneui/themed';
 import data from "./data.json"
-import Favorite from './Components/favorite';
-import NewCharity from './Components/NewCharity';
-import AddButton from './Components/AddButton'
+import Favorite from './components/favorite';
+import NewCharity from './components/NewCharity';
+import AddButton from './components/AddButton'
 
 export default function App() {
   const [searchResults, setSearchResults] = useState([])
+  const swipeAnim = useRef(new Animated.Value(0)).current; // Initial value for opacity: 0
+
+  useEffect(() => {
+    Animated.timing(swipeAnim, {
+      toValue: 100,
+      duration: 10000,
+      useNativeDriver: true,
+    }).start();
+  }, [swipeAnim]);
 
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
       <View style={styles.container}>
         <Header setSearchResults={setSearchResults} data={data}/>
        <AddButton />
-
         { /* Determine whether to render map or search results */ }
         {searchResults.length == 0 ?
           <Map /> :
@@ -46,6 +54,14 @@ export default function App() {
           </ScrollView>
         }
 
+        <Animated.View // Special animatable View
+          style={{
+            // ...props.style,
+            transform: {translateX: swipeAnim} // Bind opacity to animated value
+          }}>
+          <Favorite/>
+          {/* {props.children} */}
+        </Animated.View>
         <StatusBar style="auto" />
       </View>
     </TouchableWithoutFeedback>
