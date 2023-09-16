@@ -3,18 +3,23 @@ import { markerZoom } from "./Map";
 
 const styles = StyleSheet.create({
     filterButton: {
-        borderRadius: 10,
         backgroundColor: 'white',
-        margin: 5,
-        width: 100,
+        margin: 10,
         flex: 1,
         flexDirection: 'row',
         justifyContent: "center",
-        alignItems: "center"
+        alignItems: "center",
+        paddingHorizontal: 10,
+        borderRadius: 5,
+        shadowColor: '#171717',
+        shadowOffset: {width: -2, height: 4},
+        shadowOpacity: 0.2,
+        shadowRadius: 3,
     },
     buttonText: {
+        marginHorizontal: 10,
         color:"red",
-    }
+    },
 });
 
 export default function FilterButton({title, zoomId}) {
