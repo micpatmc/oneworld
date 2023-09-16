@@ -5,6 +5,7 @@ import Map from './Components/Map';
 import Header from './Components/Header';
 import { Button, Card } from '@rneui/themed';
 import data from "./data.json"
+import AddButton from './components/AddButton'
 
 export default function App() {
   const [searchResults, setSearchResults] = useState([])
@@ -13,6 +14,7 @@ export default function App() {
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
       <View style={styles.container}>
         <Header setSearchResults={setSearchResults} data={data}/>
+       <AddButton />
 
         { /* Determine whether to render map or search results */ }
         {searchResults.length == 0 ?
