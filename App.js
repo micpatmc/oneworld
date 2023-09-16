@@ -5,6 +5,8 @@ import Map from './Components/Map';
 import Header from './Components/Header';
 import { Button, Card } from '@rneui/themed';
 import data from "./data.json"
+import Favorite from './Components/favorite';
+import NewCharity from './Components/NewCharity';
 import AddButton from './Components/AddButton'
 
 export default function App() {
