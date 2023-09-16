@@ -85,22 +85,21 @@ export default function Header({setSearchResults, data}) {
                 </View>
                 <TouchableOpacity onPress={ onStarPress } 
                     style={{
-                        flex:1, 
-                        marginRight: 20, 
-                        borderRadius: '100%',
                         height: 50,
-                        width: 90,
-                        alignContent: 'center',
+                        width: 50,
+                        borderRadius: "50%",
+                        alignItems: "center",
                         justifyContent: 'center',
+                        marginRight: 20,                         
                         backgroundColor: '#aaaaaa',
                         borderColor: "#d9d9d9",
                         borderWidth: 2.5,
                         shadowOffset: {width: -2, height: 4},
                         shadowOpacity: 0.1,
-                        shadowRadius: 5
+                        shadowRadius: 5,
                         }}
                     >
-                    <FontAwesomeIcon icon={ faStar } style={{left: 6, bottom: 1}} size={ 32 } color={ 'gold' } />
+                    <FontAwesomeIcon icon={ faStar } size={ 32 } color={ 'gold' } />
                 </TouchableOpacity>
             </View>
             <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={{marginHorizontal:20, overflow: "hidden"}}>
