@@ -2,7 +2,7 @@ import { Alert, ScrollView, StyleSheet, TouchableOpacity, View, Text } from "rea
 import { SearchBar } from "@rneui/themed";
 import { useState } from "react";
 import FilterButton from "./FilterButton";
-import { faStar, faSchool, faTree, faDog, faChild, faMedkit, faBalanceScale, faHouseChimneyCrack } from "@fortawesome/free-solid-svg-icons";
+import { faStar, faSchool, faTree, faDog, faMedkit, faBalanceScale, faHouseChimneyCrack } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 
 const height_proportion = '20%';
@@ -103,7 +103,7 @@ export default function Header({setSearchResults, data}) {
                     <FontAwesomeIcon icon={ faStar } style={{left: 6, bottom: 1}} size={ 32 } color={ 'gold' } />
                 </TouchableOpacity>
             </View>
-            <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={{marginHorizontal: 10, overflow: "hidden"}}>
+            <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={{marginHorizontal:20, overflow: "hidden"}}>
                 <FilterButton title="Environmental" zoomId="1" imgInfo={faTree}/>
                 <FilterButton title="Education" zoomId="2" imgInfo={faSchool}/>
                 <FilterButton title="Animal Relief" zoomId="3" imgInfo={faDog}/>
