@@ -1,13 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
 import { Keyboard, ScrollView, StyleSheet, Text, TouchableWithoutFeedback, View} from 'react-native';
 import { useState } from 'react';
-import Map from './Components/Map';
-import Header from './Components/Header';
+import Map from './components/Map';
+import Header from './components/Header';
 import { Button, Card } from '@rneui/themed';
 import data from "./data.json"
-import Favorite from './Components/favorite';
-import NewCharity from './Components/NewCharity';
-import AddButton from './Components/AddButton'
+import Favorite from './components/favorite';
+import NewCharity from './components/NewCharity';
+import AddButton from './components/AddButton'
 
 export default function App() {
   const [searchResults, setSearchResults] = useState([])
