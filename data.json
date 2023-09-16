@@ -3,18 +3,37 @@
         "Name": "Doctors Without Borders",
         "Tagline": "Charity that provides humanitarian medical care.",
         "Type": "Humanitarian",
-        "Image": "https://assets.tiltify.com/uploads/cause/image/21/doctors-without-borders-msf-image-1587513225216.jpg",
+        "Image": ["https://assets.tiltify.com/uploads/cause/image/21/doctors-without-borders-msf-image-1587513225216.jpg"],
         "Website": "https://www.doctorswithoutborders.org/",
-        "Address": "ShellHacks",
-        "Location": "Earth"
+        "City": "ShellHacks",
+        "Longitude": "123",
+        "Latitude": "123"
+        
     },
     {
         "Name": "St. Jude Children's Hospital",
         "Tagline": "Finds cures for children with cancer and other catastrophic diseases through research and treatment",
         "Type": "Health",
-        "Image": "https://www.paho.org/sites/default/files/saint-jude-mexico-nina_1.jpg",
+        "Image": ["https://www.paho.org/sites/default/files/saint-jude-mexico-nina_1.jpg"],
         "Website": "https://www.stjude.org/",
-        "Address": "ShellHacks",
-        "Location": "Earth"
+        "City": "ShellHacks",
+        "Longitude": "123",
+        "Latitude": "123"
+    },
+
+    {
+        "Name": "American Red Cross",
+        "Tagline": "Help support those affected by Hurricane Idalia",
+        "Type": "Disaster Relief",
+        "Image": ["https://www.google.com/imgres?imgurl=https%3A%2F%2Fassets1.cbsnewsstatic.com%2Fhub%2Fi%2Fr%2F2023%2F08%2F30%2F9d5035f8-3c45-4fc9-9b3f-44c925f13236%2Fthumbnail%2F640x440%2F96b633d583602209d489ce548f4483fe%2Fgettyimages-1648494324.jpg%3Fv%3D6616762727d81e1cb010134e0c556e29&tbnid=lCAn_gY7ha8xSM&vet=12ahUKEwjfvqPEya-BAxW2KmIAHT_MApAQMygDegQIARBV..i&imgrefurl=https%3A%2F%2Fwww.cbsnews.com%2Fnews%2Fhurricane-idalia-damage-see-videos-photos-florida%2F&docid=dNMuiCEWTu40oM&w=640&h=440&q=hurricane%20idalia%20damages&ved=2ahUKEwjfvqPEya-BAxW2KmIAHT_MApAQMygDegQIARBV",
+                    "https://www.google.com/imgres?imgurl=https%3A%2F%2Fcloudfront-us-east-2.images.arcpublishing.com%2Freuters%2F3YSJVHVLZNKRBECGCYFLVYMFDQ.jpg&tbnid=BeHeIXPRPeSU9M&vet=12ahUKEwjfvqPEya-BAxW2KmIAHT_MApAQMygBegQIARBR..i&imgrefurl=https%3A%2F%2Fwww.reuters.com%2Fworld%2Fus%2Favoiding-catastrophe-floridas-gulf-coast-begins-cleanup-hurricane-idalia-2023-08-31%2F&docid=bI3H-QZGCFmkaM&w=5280&h=3956&q=hurricane%20idalia%20damages&ved=2ahUKEwjfvqPEya-BAxW2KmIAHT_MApAQMygBegQIARBR",
+                    "https://media-cldnry.s-nbcnews.com/image/upload/rockcms/2023-09/230901-idalia-damage-horseshoe-beach-ew-1112a-6efdd9.jpg"
+                 ],
+        "Website": "https://www.stjude.org/",
+        "City": "Port Charlotte, Florida",
+        "Longitude": "26.898047",
+        "Latitude": "-82.045993" 
     }
+
+
 ]
