@@ -1,17 +1,28 @@
 import { View, Text, TouchableOpacity, Image } from 'react-native';
 
 const AddButton = () => {
-    return(
-        <View>
-            <TouchableOpacity 
+    return (
+        <TouchableOpacity 
+            style={{
+                position: 'absolute',
+                backgroundColor: '#0000FF',
+                bottom: 50,
+                right: 25,
+                width: 100,
+                height: 100,
+                borderRadius: '100%',
+                justifyContent: 'center',
+                alignItems: 'center'
+            }}>
+            <Image
+                source={(require('../assets/plus.png'))}
                 style={{
-                    width: 20,
-                    height: 20,
-                    borderRadius: '60%'
-                }}>
-                <Image source={(require('../assets/tree.png'))}/>
-            </TouchableOpacity>
-        </View>
+                    width: 60,
+                    height: 60
+                }}
+            />
+
+        </TouchableOpacity>
     )
 }
 

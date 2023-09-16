@@ -8,8 +8,8 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Header />
-      <AddButton />
       <Map />
+      <AddButton />
       <StatusBar style="auto" />
     </View>
   );
