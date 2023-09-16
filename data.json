@@ -1,0 +1,20 @@
+[
+    {
+        "Name": "Doctors Without Borders",
+        "Tagline": "Charity that provides humanitarian medical care.",
+        "Type": "Humanitarian",
+        "Image": "https://assets.tiltify.com/uploads/cause/image/21/doctors-without-borders-msf-image-1587513225216.jpg",
+        "Website": "https://www.doctorswithoutborders.org/",
+        "Address": "ShellHacks",
+        "Location": "Earth"
+    },
+    {
+        "Name": "St. Jude Children's Hospital",
+        "Tagline": "Finds cures for children with cancer and other catastrophic diseases through research and treatment",
+        "Type": "Health",
+        "Image": "https://www.paho.org/sites/default/files/saint-jude-mexico-nina_1.jpg",
+        "Website": "https://www.stjude.org/",
+        "Address": "ShellHacks",
+        "Location": "Earth"
+    }
+]
