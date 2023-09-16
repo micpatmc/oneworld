@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, View, Text, Image } from 'react-native';
-import MapView, { PROVIDER_GOOGLE, Marker, Callout } from 'react-native-maps';
+import MapView, { PROVIDER_GOOGLE, Marker, Callout, Linking } from 'react-native-maps';
 
 export default function Map() {
   return (
@@ -27,37 +27,21 @@ export default function Map() {
           <Callout tooltip>
             <View>
               <View style={styles.calloutBubble}>
-                <Text style={styles.calloutText}>Name</Text>
-                <Text style={styles.calloutText}>Address</Text>
+                <Text style={styles.textMain}>Children's Charity</Text>
+                <Text style={styles.textTagline}>We donate to children in need.</Text>
+                <Text style={styles.textType}>Humanitarian {'\n'}</Text>
                 {/* <Image  */}
                   {/* style={styles.calloutImage} */}
                   {/* source={require('../assets/pin.png')} */}
                 {/* /> */}
-              </View>
-              <View style={styles.arrowBorder}/>
-              <View style={styles.arrow}/>
-            </View>
-          </Callout>
-        </Marker>
-        <Marker
-          coordinate={{
-            latitude: 37,
-            longitude: -100,
-          }}
-          image={require('../assets/pin.png')}
-          title="Charity"
-          description="Wildfires"
-        >
-          <Callout tooltip>
-            <View>
-              <View style={styles.calloutBubble}>
-                <Text style={styles.calloutText}>Charity2</Text>
-                <Text style={styles.calloutText}>Address</Text>
-                <Text style={styles.calloutText}></Text>
-                {/* <Image  */}
-                  {/* style={styles.calloutImage} */}
-                  {/* source={require('../assets/pin.png')} */}
-                {/* /> */}
+                <Text 
+                  style={styles.calloutURL}
+                  onPress={() => {Linking.openURL('http://google.com')}}  
+                >
+                    http://wesupportchildren.com
+                </Text>
+                <Text style={styles.text}>Children Street</Text>
+                <Text style={styles.text}>California, USA</Text>
               </View>
               <View style={styles.arrowBorder}/>
               <View style={styles.arrow}/>
@@ -88,9 +72,35 @@ const styles = StyleSheet.create({
     borderColor: '#ccc',
     borderWidth: 0.5,
     padding: 15,
-    width: 150
+    maxWidth: 300
   },
-  calloutText: {
+  textMain: {
+    textAlign: 'left',
+    fontSize: 20,
+    marginBottom: 5,
+    fontWeight: 'bold'
+  },
+  textTagline: {
+    color: '#808080',
+    textAlign: 'left',
+    fontSize: 15,
+    marginBottom: 5,
+    fontWeight: 'bold'
+  },
+  textType: {
+    color: '#aaaaaa',
+    textAlign: 'left',
+    fontSize: 15,
+    marginBottom: 5,
+    fontWeight: 'bold'
+  },
+  text: {
+    textAlign: 'left',
+    fontSize: 16,
+    marginBottom: 5
+  },
+  calloutURL: {
+    color: '#0000ff',
     textAlign: 'left',
     fontSize: 16,
     marginBottom: 5
