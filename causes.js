@@ -11,10 +11,10 @@ class Cause {
     }
   }
 
-  const Environmental = new Car("Environmental", ["The Nature Conservancy", "Sierra Club", "Earth Justice"]);
-  const Education = new Car("Education", ["Save the Children", "Room to Read", "CARE"]);
-  const Wildlife = new Car("Wildlife", ["World Wildlife Fund", "World Land Trust", "The Wildlife Trust"]);
-  const NaturalDisasters = new Car("Natural Disaster", ["Salvation Army", "Red Cross", "Americares"]);
+  const Environmental = new Cause("Environmental", ["The Nature Conservancy", "Sierra Club", "Earth Justice"]);
+  const Education = new Cause("Education", ["Save the Children", "Room to Read", "CARE"]);
+  const Wildlife = new Cause("Wildlife", ["World Wildlife Fund", "World Land Trust", "The Wildlife Trust"]);
+  const NaturalDisasters = new Cause("Natural Disaster", ["Salvation Army", "Red Cross", "Americares"]);
 
   const causes = [Environmental, Education, Wildlife, NaturalDisasters];
 
