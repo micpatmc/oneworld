@@ -62,7 +62,7 @@ export default function Header({setSearchResults, data}) {
     return (
         <View style={styles.header}>
             <View style={styles.searchArea}>
-                <View style={{flex:10}}>
+                <View style={{flex:8}}>
                     <SearchBar 
                     round={true} 
                     ref={search => this.search = search}
