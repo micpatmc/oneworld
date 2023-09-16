@@ -5,12 +5,11 @@ import FilterButton from "./FilterButton";
 import { faStar, faSchool, faTree, faDog, faChild, faMedkit, faBalanceScale, faHouseChimneyCrack } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 
-
 const height_proportion = '20%';
 
 const styles = StyleSheet.create({
     header: {
-        backgroundColor: 'rgb(255, 255, 255, 0.1)',
+        backgroundColor: '#fff',
         height: height_proportion,
         paddingTop: 50,
     },
@@ -86,7 +85,7 @@ export default function Header({setSearchResults, data}) {
                         borderWidth: 2,
                         }}
                     >
-                    <FontAwesomeIcon icon={ faStar } style={{left: 3}} size={ 32 } color={ 'gold' } />
+                    <FontAwesomeIcon icon={ faStar } style={{left: 6, bottom: 1}} size={ 32 } color={ 'gold' } />
                 </TouchableOpacity>
             </View>
             <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={{marginHorizontal: 10, overflow: "hidden"}}>
