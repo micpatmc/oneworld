@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { Keyboard, ScrollView, StyleSheet, Text, TouchableWithoutFeedback, View, Animated } from 'react-native';
+import { Keyboard, ScrollView, StyleSheet, Text, TouchableWithoutFeedback, View} from 'react-native';
 import { useState } from 'react';
 import Map from './components/Map';
 import Header from './components/Header';
@@ -11,15 +11,6 @@ import AddButton from './components/AddButton'
 
 export default function App() {
   const [searchResults, setSearchResults] = useState([])
-  const swipeAnim = useRef(new Animated.Value(0)).current; // Initial value for opacity: 0
-
-  useEffect(() => {
-    Animated.timing(swipeAnim, {
-      toValue: 100,
-      duration: 10000,
-      useNativeDriver: true,
-    }).start();
-  }, [swipeAnim]);
 
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
@@ -54,14 +45,7 @@ export default function App() {
           </ScrollView>
         }
 
-        <Animated.View // Special animatable View
-          style={{
-            // ...props.style,
-            transform: {translateX: swipeAnim} // Bind opacity to animated value
-          }}>
-          <Favorite/>
-          {/* {props.children} */}
-        </Animated.View>
+        <Favorite/>
         <StatusBar style="auto" />
       </View>
     </TouchableWithoutFeedback>
