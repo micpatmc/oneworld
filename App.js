@@ -1,13 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
 import { Keyboard, ScrollView, StyleSheet, Text, TouchableWithoutFeedback, View} from 'react-native';
 import { useState } from 'react';
-import Map from './components/Map';
-import Header from './components/Header';
+import Map from './Components/Map';
+import Header from './Components/Header';
 import { Button, Card } from '@rneui/themed';
 import data from "./data.json"
-import Favorite from './components/favorite';
-import NewCharity from './components/NewCharity';
-import AddButton from './components/AddButton'
+import Favorite from './Components/favorite';
+import NewCharity from './Components/NewCharity';
+import AddButton from './Components/AddButton'
 
 export default function App() {
   const [searchResults, setSearchResults] = useState([])
@@ -19,18 +19,12 @@ export default function App() {
 
       { /* Determine whether to render map or search results */ }
       {searchResults.length == 0 ?
-        <Map /> :
+        <Map data={data}/> :
         <ScrollView showsVerticalScrollIndicator={false}>
           {
             searchResults.map((value, index) => {
               return (
-                <Card key={index}>
-                  {
-                  /* Render Images */
-                  value.Image.map((value) => {
-                    console.log(value)
-                  })
-                  }
+                <Card containerStyle={{borderRadius:5, width: "100%"}} key={index}>
                   <Card.Image style={styles.cardImage} source={{uri: value.Image[0]}}/>
                   <Card.Title>{value.Name}</Card.Title>
                   <Text style={{textAlign:'center', marginBottom: 20}}>{value.Tagline}</Text>
