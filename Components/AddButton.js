@@ -6,13 +6,15 @@ const AddButton = () => {
             style={{
                 position: 'absolute',
                 backgroundColor: '#fff',
-                bottom: 50,
+                bottom: 60,
                 right: 25,
                 width: 80,
                 height: 80,
                 borderRadius: '100%',
                 justifyContent: 'center',
                 alignItems: 'center',
+                borderColor: "#d9d9d9",
+                borderWidth: 4,
                 zIndex: 1
             }}>
             <Image

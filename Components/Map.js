@@ -4,7 +4,7 @@ import MapView, { PROVIDER_GOOGLE, Marker, Callout, Linking } from 'react-native
 
 export const markerZoom = ({zoomId}) => {
   if (zoomId == "1")
-    this.map.fitToSuppliedMarkers(['c1','c2']);
+    this.map.fitToSuppliedMarkers(['en-1','en-2']);
 }
 
 export default function Map() {
@@ -21,7 +21,7 @@ export default function Map() {
             latitude: 37,
             longitude: -120,
           }}
-          identifier={'c1'}
+          identifier={'en-1'}
         >
           <Callout tooltip>
             <View>
@@ -52,7 +52,7 @@ export default function Map() {
             latitude: 42,
             longitude: -100,
           }}
-          identifier={'c2'}
+          identifier={'en-2'}
         >
           <Callout tooltip>
             <View>
