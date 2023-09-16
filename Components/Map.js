@@ -9,7 +9,7 @@ export const markerZoom = ({zoomId}) => {
     this.map.fitToSuppliedMarkers(['en-1','en-2']);
 }
 
-export default function Map() {
+export default function Map({data}) {
   return (
     <View style={styles.container}>
       <MapView 
@@ -17,7 +17,49 @@ export default function Map() {
         style={styles.map}
         // provider={PROVIDER_GOOGLE}
       >
-        <Marker
+        {data.map((value, index) => {
+          return (
+            <Marker
+              coordinate={{
+                latitude: parseInt(value.Latitude),
+                longitude: parseInt(value.Longitude),
+              }}
+              identifier={'en-1'}
+              key={index}
+            >
+              <Callout tooltip>
+                <View>
+                  {console.log(parseInt(value.Latitude) + '\n')}
+                  {console.log(parseInt(value.Longitude) + '\n')}
+                  <View style={styles.calloutBubble}>
+                    <Text style={styles.textMain}>{value.Name}</Text>
+                    <Text style={styles.textTagline}>{value.Tagline}</Text>
+                    <Text style={[styles.textType, { color: 'red' }]}>{value.Type} {'\n'}</Text>
+                    <Image
+                      style={styles.calloutImage}
+                      source={{uri: value.Image[0]}}
+                    />
+                    <Text 
+                      style={styles.calloutURL}
+                      onPress={() => {environmentZoom()}}
+                    >
+                        {'\n'}{value.Website}
+                    </Text>
+                    <Text style={styles.text}>{value.Location}</Text>
+                    <TouchableOpacity style={styles.favorite}>
+                      <FontAwesomeIcon icon={ faStar } style={styles.star} size={ 26 } color={ 'gold' } />
+                    </TouchableOpacity>
+                  </View>
+                  <View style={styles.arrowBorder}/>
+                  <View style={styles.arrow}/>
+                </View>
+              </Callout>
+            </Marker>
+            );
+          })
+        }
+
+        {/* <Marker
           // onPress={() => {this.map.fitToSuppliedMarkers(['c1'])}}
           coordinate={{
             latitude: 37,
@@ -82,7 +124,7 @@ export default function Map() {
               <View style={styles.arrow}/>
             </View>
           </Callout>
-        </Marker>
+        </Marker> */}
       </MapView>
     </View>
   );
