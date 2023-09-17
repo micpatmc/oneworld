@@ -9,8 +9,6 @@ const height_proportion = '20%';
 
 const styles = StyleSheet.create({
     header: {
-        position: 'relative',
-        zIndex: '1',
         backgroundColor: '#fff',
         height: height_proportion,
         paddingTop: 40,        
