@@ -1,4 +1,5 @@
 import { TouchableOpacity, Text, StyleSheet } from "react-native";
+import { markerZoom } from "./ScreenMap";
 
 const styles = StyleSheet.create({
     favoriteButton: {
@@ -24,7 +25,7 @@ const styles = StyleSheet.create({
 
 export default function FavoriteButton({title}) {
     return (
-        <TouchableOpacity style={styles.favoriteButton}>
+        <TouchableOpacity onPress={() => {markerZoom(title)}} style={styles.favoriteButton}>
             <Text styles={styles.buttonText}>{title}</Text>
         </TouchableOpacity>
     );

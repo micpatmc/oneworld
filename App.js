@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
-import { Keyboard, ScrollView, StyleSheet, Text, TouchableWithoutFeedback, View} from 'react-native';
+import { ScrollView, StyleSheet, Text, TouchableWithoutFeedback, View} from 'react-native';
 import { useState } from 'react';
-import { Button, Card } from '@rneui/themed';
+import { Card } from '@rneui/themed';
 import data from "./data.json"
 import ScreenMap from './Components/ScreenMap';
 import Header from './Components/Header';
@@ -45,7 +45,7 @@ export default function App() {
       <AddButton setNewForm={setNewForm}/>
 
       {
-        showFavorites ? <FavoriteList favorites={favorites} data={data}/> : <></>
+        showFavorites ? <FavoriteList favorites={favorites}/> : <></>
       }
 
       { /* Determine whether to render map or search results */ }
@@ -67,9 +67,6 @@ export default function App() {
                     <Text style={styles.cardInfo}><Text style={{fontWeight: "bold"}}>Type:</Text> {value.Type}</Text>
                     <Text style={styles.cardInfo}><Text style={{fontWeight: "bold"}}>Website:</Text> {value.Website}</Text>
                     <Text style={styles.cardInfo}><Text style={{fontWeight: "bold"}}>City:</Text> {value.City}</Text>
-                    <Button style={styles.cardButton} size='lg' buttonStyle={{backgroundColor:"black"}}>
-                      <Text style={{fontWeight:'bold', color:"white"}}>Go To Location</Text>
-                    </Button>
                   </View>
                 </Card>
               );

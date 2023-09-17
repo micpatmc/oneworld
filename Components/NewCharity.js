@@ -132,7 +132,7 @@ export default NewCharity = ({setNewForm}) => {
                 <TextInput style={styles.input} onChangeText={setResponse4} placeholder="Location" placeholderTextColor={'#de7c7c'}/>
                 <TextInput style={styles.input} onChangeText={setResponse5} placeholder="Website"/>
                 <TouchableOpacity onPress={onSubmission} style={styles.button}>
-                    <Text style={styles.text}> Apply! </Text>
+                    <Text style={styles.text}> Submit </Text>
                 </TouchableOpacity>          
             </ScrollView>
         </Animated.View>
