@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import { Animated, Text, View, StyleSheet, ScrollView} from 'react-native';
+import { Animated, StyleSheet, ScrollView} from 'react-native';
 import FavoriteButton from "./FavoriteButton";
 
 const styles = StyleSheet.create({
@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     }
 });
 
-export default function FavoriteList({favorites, data}) {
+export default function FavoriteList({favorites}) {
     const slideAnim = useRef(new Animated.Value(-1000)).current;
 
     // Slide animation

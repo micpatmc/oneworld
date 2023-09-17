@@ -5,9 +5,8 @@ import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import { Card } from '@rneui/themed';
 
-export const markerZoom = ({zoomId}) => {
-  if (zoomId == "1")
-    this.map.fitToSuppliedMarkers(['en-1','en-2']);
+export const markerZoom = (identifier) => {
+  this.map.fitToSuppliedMarkers([identifier]);
 }
 
 // Color according to type of event
@@ -64,10 +63,7 @@ export default function ScreenMap({data, handleFavoriteClick, filter}) {
                     <Text style={styles.textTagline}>{value.Tagline}</Text>
                     <Text style={[styles.textType, { color: 'red' }]}>{value.Type} {'\n'}</Text>
                     <View style={{maxHeight:120}}>
-                      <ScrollView>
-                        <Card.Image style={styles.calloutImage} source={{uri: value.Image[0]}}/>
-                        <Card.Image style={styles.calloutImage} source={{uri: value.Image[0]}}/>
-                      </ScrollView>
+                      <Card.Image style={styles.calloutImage} source={{uri: value.Image[0]}}/>
                     </View>
                     <Text style={styles.calloutURL} onPress={() => Linking.openURL(`${value.Website}`)}>{'\n'}View Webpage</Text>
                     <Text style={styles.text}>{value.City}</Text>
