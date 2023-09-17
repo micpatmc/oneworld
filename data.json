@@ -1,58 +1,425 @@
 [
     {
-        "Name": "Doctors Without Borders",
-        "Tagline": "Charity that provides humanitarian medical care.",
-        "Type": "Humanitarian",
-        "Image": ["https://assets.tiltify.com/uploads/cause/image/21/doctors-without-borders-msf-image-1587513225216.jpg"],
-        "Website": "https://www.doctorswithoutborders.org/",
-        "City": "ShellHacks",
-        "Latitude": -20,
-        "Longitude": 100
-        
-    },
-    {
-        "Name": "St. Jude Children's Hospital",
-        "Tagline": "Finds cures for children with cancer and other catastrophic diseases through research and treatment",
-        "Type": "Health",
-        "Image": ["https://www.paho.org/sites/default/files/saint-jude-mexico-nina_1.jpg"],
-        "Website": "https://www.stjude.org/",
-        "City": "ShellHacks",
-        "Latitude": -50,
-        "Longitude": 100
-    },
-    {
         "Name": "American Red Cross",
-        "Tagline": "Help support those affected by Hurricane Idalia",
+        "Tagline": "Help those affected by the recent Hurricane Idalia",
         "Type": "Disaster Relief",
         "Image": ["https://assets1.cbsnewsstatic.com/hub/i/r/2023/08/30/9d5035f8-3c45-4fc9-9b3f-44c925f13236/thumbnail/640x440/96b633d583602209d489ce548f4483fe/gettyimages-1648494324.jpg?v=6616762727d81e1cb010134e0c556e29",
                     "https://www.google.com/imgres?imgurl=https%3A%2F%2Fcloudfront-us-east-2.images.arcpublishing.com%2Freuters%2F3YSJVHVLZNKRBECGCYFLVYMFDQ.jpg&tbnid=BeHeIXPRPeSU9M&vet=12ahUKEwjfvqPEya-BAxW2KmIAHT_MApAQMygBegQIARBR..i&imgrefurl=https%3A%2F%2Fwww.reuters.com%2Fworld%2Fus%2Favoiding-catastrophe-floridas-gulf-coast-begins-cleanup-hurricane-idalia-2023-08-31%2F&docid=bI3H-QZGCFmkaM&w=5280&h=3956&q=hurricane%20idalia%20damages&ved=2ahUKEwjfvqPEya-BAxW2KmIAHT_MApAQMygBegQIARBR",
                     "https://media-cldnry.s-nbcnews.com/image/upload/rockcms/2023-09/230901-idalia-damage-horseshoe-beach-ew-1112a-6efdd9.jpg"
                  ],
         "Website": "https://www.stjude.org/",
+        "City": "Keaton Beach, Florida",
+        "Latitude": "29.819281", 
+        "Longitude": "-83.593733"
+    },
+
+    {
+        "Name": "Zakat Foundation of America",
+        "Tagline": "Provide relief to those affected in the recent Morroco earthquakes ",
+        "Type": "Disaster Relief",
+        "Image": ["https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.bbc.com%2Fnews%2Fworld-africa-66801789&psig=AOvVaw2VxyLKrd-kMeq_SMbJQDng&ust=1694971734699000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCLj9rfPTr4EDFQAAAAAdAAAAABAE",
+                    "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.nbcnews.com%2Fid%2Fwbna4358425&psig=AOvVaw2VxyLKrd-kMeq_SMbJQDng&ust=1694971734699000&source=images&cd=vfe&opi=89978449&ved=0CA8QjRxqFwoTCLj9rfPTr4EDFQAAAAAdAAAAABAj",
+                    "https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2F2023_Marrakesh-Safi_earthquake&psig=AOvVaw2VxyLKrd-kMeq_SMbJQDng&ust=1694971734699000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCLj9rfPTr4EDFQAAAAAdAAAAABAu"
+                 ],
+        "Website": "https://secure.zakat.org/np/clients/zakat/donation.jsp?utm_source=Google&utm_medium=cpc&utm_campaign=Morroco&gad=1&gclid=CjwKCAjwpJWoBhA8EiwAHZFzfo9MNzR9TodflwB1Fq8FSUZK7x2NtfH1aUuIbOGUA3SCTpbQ7ZLdChoCeyAQAvD_BwE&ppcsclkid=CjwKCAjwpJWoBhA8EiwAHZFzfo9MNzR9TodflwB1Fq8FSUZK7x2NtfH1aUuIbOGUA3SCTpbQ7ZLdChoCeyAQAvD_BwE&ppcstrkid=1055038831&ppcsu=xhg7f5djqsppaalliroggib",
+        "City": "Ighil, Morroco",
+        "Latitude": "30.054313", 
+        "Longitude": "-8.851805"
+    },
+
+    {
+        "Name": "Florida Disaster",
+        "Tagline": "Help support those affected by Tornadoes in Charlotte and Lee county",
+        "Type": "Disaster Relief",
+        "Image": ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBgL6ckl9FxwPW8UH62AJ9UV3T4SxWrmSI8Q&usqp=CAU",
+                    "https://cloudfront-us-east-1.images.arcpublishing.com/gray/GCI4FT7YYRB6ZAVHS73U7NRRQ4.jpg",
+                    "https://ktvz.b-cdn.net/2022/01/S180509152-300-scaled.jpg"
+                 ],
+        "Website": "https://www.floridadisaster.org/info/Assistance/",
         "City": "Port Charlotte, Florida",
-        "Latitude": -40,
-        "Longitude": 100
+        "Latitude": "-82.045993", 
+        "Longitude": "26.898047"
     },
+
     {
-        "Name": "Children's Charity",
-        "Tagline": "We donate to children in need.",
-        "Type": "Humanitarian",
-        "Image": ["data:image/jpeg;base64,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"],
-        "Website": "http://wesupportchildren.com",
-        "City": "San Francisco, California, USA",
-        "Latitude": -30,
-        "Longitude": 100
+        "Name": "California Fire Fund",
+        "Tagline": "Donate to fight against wildfires in California",
+        "Type": "Disaster Relief",
+        "Image": ["https://media.cnn.com/api/v1/images/stellar/prod/220730210827-01-mckinney-fire-0730.jpg?c=original",
+                    "https://i0.wp.com/calmatters.org/wp-content/uploads/2022/06/112822-WildFire-NB-AP-CM-1.jpg?fit=1200%2C799&ssl=1",
+                    "https://assets.teenvogue.com/photos/5dceec5a12b1e90009a33c04/16:9/w_2560%2Cc_limit/00-story-california-wildfires.jpg"
+                 ],
+        "Website": "https://cpf.salsalabs.org/cff-donation/index.html/",
+        "City": "South San Jose, California",
+        "Latitude": "37.256372", 
+        "Longitude": "-121.765619"
     },
+
     {
-        "Name": "Save the Trees",
-        "Tagline": "Save the trees one at a time.",
-        "Type": "Environment",
-        "Image": ["https://media.springernature.com/lw685/springer-static/image/art%3A10.1038%2Fs41477-019-0374-3/MediaObjects/41477_2019_374_Figa_HTML.jpg?as=webp"],
-        "Website": "http://savethetrees.com",
-        "City": "Nebraska City, Nebraska, USA",
-        "Latitude": 26.005769260451167, 
-        "Longitude": -80.27320058676919
-    }
+        "Name": "UN Crisis Relief",
+        "Tagline": "Help those affected by the devastating cyclone Mocha in Bangladesh and Mynmar",
+        "Type": "Disaster Relief",
+        "Image": ["https://www.rfa.org/english/news/myanmar/mocha-05152023160426.html/mocha-cyclone-slideshow/1-000_33f848l.jpg/@@images/de3a203d-f2ec-4ac4-b1d3-2f9eaed0e82f.jpeg",
+                    "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.washingtonpost.com%2Fphotography%2Finteractive%2F2023%2Fphotos-cyclone-mocha-strikes-myanmar-bangladesh%2F&psig=AOvVaw36bZrDFtyQktYvGiGXeIvX&ust=1694973985843000&source=images&cd=vfe&opi=89978449&ved=0CA8QjRxqFwoTCOD45aTcr4EDFQAAAAAdAAAAABAZ",
+                    "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.aljazeera.com%2Fgallery%2F2023%2F5%2F17%2Fphotos-rohingya-in-myanmar-count-the-dead-after-cyclone-mocha&psig=AOvVaw36bZrDFtyQktYvGiGXeIvX&ust=1694973985843000&source=images&cd=vfe&opi=89978449&ved=0CA8QjRxqFwoTCOD45aTcr4EDFQAAAAAdAAAAABAh"
+                 ],
+        "Website": "https://crisisrelief.un.org/cyclone-mocha-myanmar-appeal?gclid=CjwKCAjwpJWoBhA8EiwAHZFzfm4AI_IeCiTtYCLGQ2kpgmO3b3qra_P0Xd9LsXp_NlIxLJFMoczyjxoCAS4QAvD_BwE",
+        "City": "Chattogram, Bangladesh",
+        "Latitude": "22.357249" ,
+        "Longitude": "91.803655"
+    },
 
 
+
+
+
+
+
+
+    {
+        "Name": "Save the Children",
+        "Tagline": "Support a child in Niger against starvation and extreme poverty ",
+        "Type": "Impoverished Areas",
+        "Image": ["https://www.unicef.org/sites/default/files/styles/press_release_feature/public/UNI328048.jpg?itok=VVFxcgc3",
+                    "https://cdn.statcdn.com/Infographic/images/normal/6766.jpeg"
+                 ],
+        "Website": "https://www.savethechildren.org/us/where-we-work/niger",
+        "City": "Niger, Africa",
+        "Latitude": "17.416168" ,
+        "Longitude": "10.776486"
+    },
+
+    {
+        "Name": "Wuqu' Kawoq",
+        "Tagline": "Support guatemalans suffering through malnutrition",
+        "Type": "Impoverished Areas",
+        "Image": ["https://seedsforafuture.org/wp-content/uploads/2022/01/The-Challenge-of-Chronic-Malnutrion-in-Gautemala.jpg",
+                    "https://www.chaireunesco-adm.com/local/cache-vignettes/L521xH651/fig_1_sowhat_21_en-9d19b.png?1683645392"
+                 ],
+        "Website": "https://givingcompass.org/project/7107/fight-rising-malnutrition-in-rural-guatemala",
+        "City": "Guatemala, Central America",
+        "Latitude": "15.492527" ,
+        "Longitude": "-90.168862"
+    },
+
+
+    {
+        "Name": "Fly The Phoenix",
+        "Tagline": "Help children in Peru gain educational and nutritional access",
+        "Type": "Impoverished Areas",
+        "Image": [  "https://projectperu.org.uk/wp-content/uploads/2019/06/IMG-20180331-WA0031-1024x768.jpg",
+                    "https://southernvoice.org/wp-content/uploads/2018/07/YOUNG-LIVES-1-RESIZED.jpg"
+                 ],
+        "Website": "https://www.globalgiving.org/projects/free-education-in-peru/",
+        "City": "Peru, South America",
+        "Latitude": "-9.779619",
+        "Longitude": "-74.755482"
+    },
+
+    {
+        "Name": "Action Change",
+        "Tagline": "Aid in feeding hungry children in Zimbabwe",
+        "Type": "Impoverished Areas",
+        "Image": [  "https://i.guim.co.uk/img/media/8da93c42a84a73f86623835fe011b852b85ee1e4/0_200_3000_1800/master/3000.jpg?width=1200&quality=85&auto=format&fit=max&s=91b3a7fa0b395b4959be4f6504f0ef71",
+                    "https://i0.wp.com/vohzimbabwe.com/wp-content/uploads/2021/06/zimbabwe-gallery.jpg?resize=1024%2C768&ssl=1"
+                 ],
+        "Website": "https://www.globalgiving.org/projects/help-feed-hungy-children-in-zimbabwe/",
+        "City": "Zimbabwe, Africa",
+        "Latitude": "-19.015438", 
+        "Longitude": "29.154858"
+    },
+
+    {
+        "Name": "Eat up Australia",
+        "Tagline": "Help more children in Australia to be provided with school lunch",
+        "Type": "Impoverished Areas",
+        "Image": [  "https://www.hsph.harvard.edu/news/wp-content/uploads/sites/21/2015/09/school-lunch.jpg",
+                    "https://assets.medpagetoday.net/media/images/93xxx/93216.jpg"
+                 ],
+        "Website": "https://www.eatup.org.au/",
+        "City": "Australia",
+        "Latitude": "-25.274399" ,
+        "Longitude": "133.775131"
+    },
+    
+    
+
+
+
+
+
+    {
+        "Name": "I Promise School",
+        "Tagline": "School started by Lebron James to completely underprivelaged children's education",
+        "Type": "Education",
+        "Image": [  "https://img.buzzfeed.com/buzzfeed-static/static/2023-07/31/18/asset/27a59dddf880/sub-buzz-508-1690829613-1.jpg",
+                    "https://www.beaconjournal.com/gcdn/media/2020/08/24/Akron/ghows-OH-200719487-b7b6fa47.jpg?width=660&height=440&fit=crop&format=pjpg&auto=webp"
+                 ],
+        "Website": "https://www.lebronjamesfamilyfoundation.org/i-promise-school/",
+        "City": "Akron, Ohio",
+        "Latitude": "41.090119" ,
+        "Longitude": "-81.530494"
+    },
+
+    {
+        "Name": "Develop Africa",
+        "Tagline": "Educate the African youth to be future Leaders",
+        "Type": "Education",
+        "Image": [  "https://www.humanium.org/en/wp-content/uploads/2021/06/shutterstock_1751809388-1024x683.jpg",
+                    "https://borgenproject.org/wp-content/uploads/Child_Soldiers_in_Sierra_Leone-530x353.jpg"
+                 ],
+        "Website": "https://www.globalgiving.org/projects/educate-the-next-generation-of-leaders-in-freetown/",
+        "City": "Sierra Leone, Africa",
+        "Latitude": "18.316311" ,
+        "Longitude": "-66.112129"
+    },
+
+    {
+        "Name": "Dhammajarinee Witthaya Foundation",
+        "Tagline": "Helping girls that are suffering with poverty",
+        "Type": "Education",
+        "Image": [  "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.unicef.org%2Fthailand%2Fpress-releases%2Fremoving-barriers-migrant-childrens-education-thailand&psig=AOvVaw0Kt8Cz-DcbpnC0o-K7d9mz&ust=1695005387591000&source=images&cd=vfe&opi=89978449&ved=0CA8QjRxqFwoTCIDCqaLRsIEDFQAAAAAdAAAAABAE",
+                    "https://www.uvolunteer.net/wp-content/uploads/volunteer-in-thailand-with-children-2.jpg"
+                 ],
+        "Website": "https://www.globalgiving.org/projects/educate-100-more-at-risk-girls-in-thailand/",
+        "City": "Thailand, Asia",
+        "Latitude": "15.870032" ,
+        "Longitude": "100.992538"
+    },
+
+    {
+        "Name": "The SOAR Foundation",
+        "Tagline": "Help fund scholarships for students in china",
+        "Type": "Education",
+        "Image": [  "https://content.fortune.com/wp-content/uploads/2019/12/GettyImages-1191628288.jpg",
+                    "https://worldcrunch.com/media-library/young-students-in-china-holding-up-their-hands.jpg?id=27477043&width=2000&height=1500&quality=85&coordinates=0%2C0%2C390%2C0"
+                 ],
+        "Website": "https://www.globalgiving.org/projects/soar-foundation-fund-scholarships-in-rural-china/",
+        "City": "China, Asia",
+        "Latitude": "35.000074" ,
+        "Longitude": "104.999927"
+    },
+
+    {
+        "Name": "Global Education Campaign",
+        "Tagline": "Help in providing college for Yasmin Bibi girls",
+        "Type": "Education",
+        "Image": [  "https://cla.umn.edu/sites/cla.umn.edu/files/styles/feature_image/public/unsorted/images/islm_image_3.png?h=2d235432&itok=z0cI5oEg",
+                    "https://imgcdn.pakistanpoint.com/media/2018/03/_3/730x425/pic_1520342177_1.jpg"
+                 ],
+        "Website": "https://www.globalgiving.org/projects/break-barriers-yasmin-bibi-girls-college/",
+        "City": "Pakistan, Asia",
+        "Latitude": "30.3308401" ,
+        "Longitude": "71.247499"
+    },
+
+
+
+
+
+
+    {
+        "Name": "Feeding Pets of the Homeless",
+        "Tagline": "Donate funds that will be used to feed pets without homes",
+        "Type": "Animal Relief",
+        "Image": [  "https://www.treehugger.com/thmb/k-Qi2L9aiXldakTCQaWysyxkP94=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__mnn__images__2016__10__Homeless-Person-Pipe-Playing-Dogs-b51112782c124b6b8a38a8b8378578ed.jpg",
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZp-UvYOWx3JaYE77oZu3BWwD3I_fzigb7-h9U61kW2dwX5Ei0V_85xD7aPuZHdd0nh1Y&usqp=CAU"
+                 ],
+        "Website": "https://www.globalgiving.org/projects/emergency-vet-care-for-pets-of-the-homeless/",
+        "City": "Canada, North America",
+        "Latitude": "61.0666922" ,
+        "Longitude": "-107.991707"
+    },
+
+    {
+        "Name": "Penguins International",
+        "Tagline": "Donate funds fully to the research and conservation for the endangered Penguin species",
+        "Type": "Animal Relief",
+        "Image": [  "https://files.worldwildlife.org/wwfcmsprod/images/HERO_Penguins_Antarctica/story_full_width/9de57cats0_Medium_WW267491.jpg",
+                    "https://www.cabq.gov/artsculture/biopark/news/10-cool-facts-about-penguins/@@images/1a36b305-412d-405e-a38b-0947ce6709ba.jpeg"
+                 ],
+        "Website": "https://www.penguinsinternational.org/donate/?gclid=CjwKCAjwpJWoBhA8EiwAHZFzfkhGajCAtdp4SA1B42AVHtHz_NWdGhc8KeCu-Y9CBytU1__sQCNJ_xoCB_kQAvD_BwE",
+        "City": "Antartica",
+        "Latitude": "-79.4063075" ,
+        "Longitude": "0.3149312"
+    },
+
+    {
+        "Name": "Pandas International",
+        "Tagline": "Help in the conservation effort for the endangered Giant Panda Species",
+        "Type": "Animal Relief",
+        "Image": [  "https://nationalzoo.si.edu/sites/default/files/styles/1400_scale/public/animals/giantpanda-001.jpg?itok=QjpspIsF",
+                    "https://images.immediate.co.uk/production/volatile/sites/23/2019/02/PANDAG_040188_1_CMYK-87c9cea.jpg"
+                 ],
+        "Website": "https://www.pandasinternational.org/?gclid=CjwKCAjwpJWoBhA8EiwAHZFzfkEsa329n_foK5LU3Ba74T4lgL3452RbKCHAZhK9c7ZSLwoiQNfaPBoC1nMQAvD_BwE",
+        "City": "Sichuan, China",
+        "Latitude": "35.000074" ,
+        "Longitude": "104.999927"
+    },
+
+    {
+        "Name": "African Wildlife Foundation",
+        "Tagline": "Assist conservationist in the effort to preserve the endangered",
+        "Type": "Animal Relief",
+        "Image": [  "https://files.worldwildlife.org/wwfcmsprod/images/HERO_Mountain_Gorilla_Silverback_WW22557/hero_small/17l7fosr27_Mountain_Gorilla_Silverback_WW22557.jpg",
+                    "https://th-thumbnailer.cdn-si-edu.com/pyCnVH89Xr5prlTtSTU2nLAMX6w=/fit-in/1600x0/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/91/84/9184b091-b620-4ae4-a702-f56679bae3fe/1-infant_mtn_gorilla-katwe_group-oct_19_bwindi-copyright_gorilla_doctors_copy.png"  
+                 ],
+        "Website": "https://www.awf.org/news/protecting-rwandas-mountain-gorillas?gad=1&gclid=CjwKCAjwpJWoBhA8EiwAHZFzfuzBTIkYsh8Ma1bqOIV-zJ3_zVlzcyAYGLKkz7a4YRfKCA4zjb8snBoCaCYQAvD_BwE",
+        "City": "Rwanda, Africa",
+        "Latitude": "-1.9646631" ,
+        "Longitude": "30.0644358"
+    },
+
+    {
+        "Name": "The Black Sheep Animal Sanctuary",
+        "Tagline": "Give a donation gift to help support this sanctuary.",
+        "Type": "Animal Relief",
+        "Image": [  "https://mediaproxy.snopes.com/width/1200/https://media.snopes.com/2022/08/1620px-SchafinLichtenberg.jpeg",
+                    "https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/black-sheep-at-night-cindy-lange.jpg"
+                 ],
+        "Website": "http://www.theblacksheep.org.nz/donate.html",
+        "City": "New Zealand",
+        "Latitude": "-41.5000831" ,
+        "Longitude": "172.8344077"
+    },
+
+
+
+
+
+
+    {
+        "Name": "Liberty in North Korea",
+        "Tagline": "Help support those who have ardously made it out of the North Korean regime",
+        "Type": "Social Justice",
+        "Image": [  "https://media.cnn.com/api/v1/images/stellar/prod/220215213630-06-north-korea-refugees.jpg?q=h_2946,w_4414,x_0,y_0",
+                    ""
+                 ],
+        "Website": "https://libertyinnorthkorea.org/donate",
+        "City": "North Korea",
+        "Latitude": "40.3736611" ,
+        "Longitude": "127.0870417"
+    },
+
+    {
+        "Name": "Global fund for Children",
+        "Tagline": "Help combat child trafficking in india",
+        "Type": "Social Justice",
+        "Image": [  "https://asiasociety.org/files/160801_trafficking.jpg",
+                    "https://borgenproject.org/wp-content/uploads/causes_of_human_trafficking_in_India.jpg"
+                 ],
+        "Website": "https://globalfundforchildren.org/initiatives/combatting-child-trafficking-in-india/",
+        "City": "India, Asia",
+        "Latitude": "22.3511148" ,
+        "Longitude": "78.6677428"
+    },
+
+    {
+        "Name": "Amnesty International",
+        "Tagline": "Help protect citizens that are victim of the russian war struggle",
+        "Type": "Social Justice",
+        "Image": [  "https://www.aljazeera.com/wp-content/uploads/2023/09/33UN68N-highres-1694827144.jpg?resize=770%2C513&quality=80",
+                    "https://www.aljazeera.com/wp-content/uploads/2022/02/2022-02-25T062356Z_2116856991_RC2UQS9Q6PNA_RTRMADP_3_UKRAINE-CRISIS.jpg?resize=1170%2C780&quality=80"
+                 ],
+        "Website": "https://donate.amnestyusa.org/page/122555/donate/1?ea.tracking.id=MRPaidSearchFR2023&supporter.appealCode=W23XXADEVR0P&en_og_source=W23XXADEVR0P&gad=1&gclid=CjwKCAjwpJWoBhA8EiwAHZFzfpPrNsqQp-qiR5X2WefDuqN9e2TDu0PL-DFln-uwgRB7iDlLMMmznBoC7I8QAvD_BwE&gclsrc=aw.ds",
+        "City": "Ukraine",
+        "Latitude": "49.4871968" ,
+        "Longitude": "31.2718321"
+    },
+
+    {
+        "Name": "MADRE",
+        "Tagline": "Help aid in the effort to build shelters for women fleeing violence ",
+        "Type": "Social Justice",
+        "Image": [  "https://www.unhcr.org/sites/default/files/styles/standard_08/public/legacy-images/562637da6.jpg?h=e1fd0b71&itok=04R9tSNf",
+                    "https://blogsmedia.lse.ac.uk/blogs.dir/22/files/2020/06/kirkuk-women-670-web.jpg"
+                 ], 
+        "Website": "https://www.globalgiving.org/projects/shelters-for-women-in-iraq/",
+        "City": "Iraq",
+        "Latitude": "33.0955793" ,
+        "Longitude": "44.1749775"
+    },
+
+    {
+        "Name": "NAACP",
+        "Tagline": "Help fight against racism against people of color",
+        "Type": "Social Justice",
+        "Image": [  "https://www.jacksonsun.com/gcdn/authoring/video-thumbnails/17eb1953-74d1-4d70-b597-1bbb3b010fdf_poster.jpg?width=NaN&disable=upscale&format=pjpg&auto=webp",
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg7yQ_HHvKlQfLQTujqOLCFbJLA35qutIBOUl2ZhsvX01dB-7mEaFZvuYRbuO1QPOvriw&usqp=CAU"
+                 ],
+        "Website": "https://naacp.org/donate",
+        "City": "Tennessee, USA",
+        "Latitude": "35.7730076" ,
+        "Longitude": "-86.2820081"
+    },
+
+
+
+
+
+
+
+    {
+        "Name": "SEMA INSANI VE TIBBI YARDIM DERNEGI",
+        "Tagline": "Help provide medical attention to hospitals and medical centers in the middle east",
+        "Type": "Medical",
+        "Image": [  "https://static01.nyt.com/images/2019/12/04/world/04Syria-medical1/04Syria-medical1-articleLarge-v2.jpg?quality=75&auto=webp&disable=upscale",
+                    "https://static.independent.co.uk/s3fs-public/thumbnails/image/2020/04/07/15/euth-q9wkaiuaia.jpeg?width=1200"
+                 ],
+        "Website": "https://www.globalgiving.org/projects/provide-urgent-medical-attention-to-syrians/",
+        "City": "Syria",
+        "Latitude": "34.6401861" ,
+        "Longitude": "39.0494106"
+    },
+
+    {
+        "Name": "St.Jude Children's Hospital",
+        "Tagline": "This hospital is on of the most popular pediatric cancer and research center",
+        "Type": "Medical",
+        "Image": [  "https://www.borgenmagazine.com/wp-content/uploads/2017/10/Jennifer-Aniston.jpg",
+                    "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.inc.com%2Fjacob-morgan%2Fhow-st-jude-childrens-research-hospital-creates-a-desirable-place-to-work.html&psig=AOvVaw2XBsoJ62Ygpfn9RZHU9bvl&ust=1695013667447000&source=images&cd=vfe&opi=89978449&ved=0CA8QjRxqFwoTCJjAxo7wsIEDFQAAAAAdAAAAABAJ"
+                 ],
+        "Website": "https://www.stjude.org/donate/donate-to-st-jude.html?frequency_selected=1&sc_dcm=58700008005633531&sc_cid=kwp&sc_cat=b&ds_rl=1285465&ds_rl=1291300&ds_rl=1290690&gclid=CjwKCAjwpJWoBhA8EiwAHZFzfhWL9k7TwptJ1k-UFsqnVv7hbY_jo308NLh0jcVfJ_1Cfu6ARQAOWBoCJ9kQAvD_BwE&gclsrc=aw.ds ",
+        "City": "Houston",
+        "Latitude": "29.751434" ,
+        "Longitude": "-95.454401"
+    },
+
+    {
+        "Name": "Great Ormond Street Hospital",
+        "Tagline": "Provide donations to this children's cancer treatment center",
+        "Type": "Medical",
+        "Image": [  "https://www.288group.com/wp-content/uploads/2019/11/Great-Ormond-Street-Hospital-Cheque-Givign.jpg",
+                    "https://i.guim.co.uk/img/media/874443d5eddeb3ce72d90f38949ac15f209f2750/0_115_3500_2100/master/3500.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdG8tYWdlLTIwMTgucG5n&s=b6a90a313b363681a1f4bca555a8390c"
+                 ],
+        "Website": "https://www.gosh.org/",
+        "City": "London, Europe",
+        "Latitude": "51.5073359" ,
+        "Longitude": "-0.12765"
+    },
+
+    {
+        "Name": "SickKids",
+        "Tagline": "Help support to make kids healthy enough to return to school",
+        "Type": "Medical",
+        "Image": [  "https://www.sickkids.ca/siteassets/news/news-archive/news-generic-teaser-images/news-generic-sickkids-exterior-sign-1200x800.jpg",
+                    "https://www.sickkids.ca/siteassets/images/teasers/sickkids-exterior-university-full-building-teaser-1200x800.png"
+                 ],
+        "Website": "https://www.google.com/search?sca_esv=566021433&sxsrf=AM9HkKm22eeClc2iBzv3WhZQ7gKU3v0swg:1694928415540&q=sickKids&tbm=isch&source=lnms&sa=X&ved=2ahUKEwiDxYKx9LCBAxVRVTABHZ5dAV4Q0pQJegQIDBAB&biw=1422&bih=758&dpr=0.9#imgrc=YA9cLLCa55lqIM",
+        "City": "Toronto, Canada",
+        "Latitude": "43.6534817" ,
+        "Longitude": "-79.3839347"
+    },
+
+    {
+        "Name": "National University Health System",
+        "Tagline": "Help support patients through their recovery journey",
+        "Type": "Medical",
+        "Image": [  "https://www.nuhs.edu.sg/PublishingImages/Home-Page-Images/Tab-Images/NUHS%20Careers%20Homepage.jpg",
+                    "https://www.healthcareitnews.com/sites/hitn/files/NUHS%20Tower%20Block%20Fa%C3%A7ade%203.jpg"
+                 ],
+        "Website": "https://www.google.com/url?q=https://www.nuhs.edu.sg/Make-a-Gift/Give-a-Gift-Today/Pages/Gift-Hope-to-Our-Patients.aspx&sa=D&source=docs&ust=1694932198336691&usg=AOvVaw0z_FXK6v2O0OEluIqJIN0p",
+        "City": "Seoul, South Korea",
+        "Latitude": "37.5666791" ,
+        "Longitude": "126.9782914"
 ]

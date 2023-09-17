@@ -2,8 +2,9 @@ import { Alert, ScrollView, StyleSheet, TouchableOpacity, View, Text } from "rea
 import { SearchBar } from "@rneui/themed";
 import { useState } from "react";
 import FilterButton from "./FilterButton";
-import { faStar, faSchool, faTree, faDog, faMedkit, faBalanceScale, faHouseChimneyCrack } from "@fortawesome/free-solid-svg-icons";
+import { faStar, faHurricane, faDog, faMedkit, faBalanceScale, faHouseChimneyCrack } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
+import { ToggleFavorite } from "../App";
 
 const height_proportion = '20%';
 
@@ -85,12 +86,11 @@ export default function Header({toggleFavorites, setSearchResults, data}) {
                 </TouchableOpacity>
             </View>
             <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={{marginHorizontal:20, overflow: "hidden"}}>
-                <FilterButton title="Environmental" zoomId="1" imgInfo={faTree}/>
-                <FilterButton title="Education" zoomId="2" imgInfo={faSchool}/>
-                <FilterButton title="Animal Relief" zoomId="3" imgInfo={faDog}/>
-                <FilterButton title="Impoverished Areas" zoomId="4" imgInfo={faHouseChimneyCrack}/>
+                <FilterButton title="Disaster Relief" zoomId="1" imgInfo={faHurricane}/>
+                <FilterButton title="Impoverished Areas" zoomId="3" imgInfo={faHouseChimneyCrack}/>
                 <FilterButton title="Social Justice" zoomId="5" imgInfo={faBalanceScale}/>
-                <FilterButton title="Medical" zoomId="6" imgInfo={faMedkit}/>
+                <FilterButton title="Animal Relief" zoomId="2" imgInfo={faDog}/>
+                <FilterButton title="Medical" zoomId="4" imgInfo={faMedkit}/>
             </ScrollView>
         </View>
     );
