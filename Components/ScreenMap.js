@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from "react";
 import MapView, { Marker, Callout, Linking } from 'react-native-maps';
 import { StyleSheet, View, Text, Image, TouchableOpacity, ScrollView } from 'react-native';
 import { faStar } from "@fortawesome/free-solid-svg-icons";
@@ -105,8 +104,6 @@ const styles = StyleSheet.create({
     height: 100,
   },
   calloutBubble: {
-    position: 'relative',
-    zIndex: '9999',
     flexDirection: 'column',
     alignSelf: 'flex-start',
     backgroundColor: '#fff',
