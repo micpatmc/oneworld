@@ -37,11 +37,12 @@ export default function App() {
       return
     }
     setFilter(newFilter);
+    console.log(newFilter)
   }
 
   return (
     <View style={styles.container}>
-      <Header toggleFavorites={toggleFavorites} setSearchResults={setSearchResults} data={data} changeFilter={changeFilter}/>
+      <Header toggleFavorites={toggleFavorites} setSearchResults={setSearchResults} data={data} changeFilter={changeFilter} filter={filter}/>
       <AddButton setNewForm={setNewForm}/>
 
       {

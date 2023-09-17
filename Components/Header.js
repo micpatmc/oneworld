@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     },
 });
 
-export default function Header({toggleFavorites, setSearchResults, data, changeFilter}) {
+export default function Header({toggleFavorites, setSearchResults, data, changeFilter, filter}) {
     const [text, setText] = useState(null)
 
     const handleSearch = (searchString) => {
@@ -85,12 +85,12 @@ export default function Header({toggleFavorites, setSearchResults, data, changeF
                 </TouchableOpacity>
             </View>
             <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={{marginHorizontal:20, overflow: "hidden"}}>
-                <FilterButton title="Disaster Relief" zoomId="1" imgInfo={faHurricane} iconColor='blue' changeFilter={() => {changeFilter('Disaster Relief')}}/>
-                <FilterButton title="Impoverished Areas" zoomId="2" imgInfo={faHouseChimneyCrack} iconColor='brown' changeFilter={() => {changeFilter('Impoverished Areas')}}/>
-                <FilterButton title="Social Justice" zoomId="3" imgInfo={faBalanceScale} iconColor='gray' changeFilter={() => {changeFilter('Social Justice')}}/>
-                <FilterButton title="Education" zoomId="4" imgInfo={faSchool} iconColor='green' changeFilter={() => {changeFilter('Education')}}/>
-                <FilterButton title="Animal Relief" zoomId="5" imgInfo={faDog} iconColor='orange' changeFilter={() => {changeFilter('Animal Relief')}}/>
-                <FilterButton title="Medical" zoomId="6" imgInfo={faMedkit} iconColor='red' changeFilter={() => {changeFilter('Medical')}}/>
+                <FilterButton title="Disaster Relief" zoomId="1" imgInfo={faHurricane} iconColor='blue' changeFilter={changeFilter} filter={filter}/>
+                <FilterButton title="Impoverished Areas" zoomId="2" imgInfo={faHouseChimneyCrack} iconColor='brown' changeFilter={changeFilter} filter={filter}/>
+                <FilterButton title="Social Justice" zoomId="3" imgInfo={faBalanceScale} iconColor='gray' changeFilter={changeFilter} filter={filter}/>
+                <FilterButton title="Education" zoomId="4" imgInfo={faSchool} iconColor='green' changeFilter={changeFilter} filter={filter}/>
+                <FilterButton title="Animal Relief" zoomId="5" imgInfo={faDog} iconColor='orange' changeFilter={changeFilter} filter={filter}/>
+                <FilterButton title="Medical" zoomId="6" imgInfo={faMedkit} iconColor='red' changeFilter={changeFilter} filter={filter}/>
             </ScrollView>
         </View>
     );

@@ -82,7 +82,7 @@ export default function ScreenMap({data, handleFavoriteClick, filter, favorites}
                 </View>
               </Callout>
             </Marker>
-            ) : <></>
+            ) : <View></View> // WIP
           })
         }
       </MapView>
