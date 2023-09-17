@@ -91,8 +91,8 @@ export default function App() {
                   <Card.Divider />
                   <View style={styles.searchResult}>
                     <Text style={styles.cardInfo}><Text style={{fontWeight: "bold"}}>Type:</Text> {value.Type}</Text>
-                    <Text style={styles.cardInfo}><Text style={{fontWeight: "bold"}}>Website:</Text> {value.Website}</Text>
                     <Text style={styles.cardInfo}><Text style={{fontWeight: "bold"}}>City:</Text> {value.City}</Text>
+                    <Text style={styles.URL}>{'\n'}View Webpage</Text>
                   </View>
                 </Card>
               );
@@ -125,5 +125,11 @@ const styles = StyleSheet.create({
   debug: {
     borderWidth: 5,
     borderColor: 'red'
+  },
+  URL: {
+    color: '#0000ff',
+    textAlign: 'left',
+    fontSize: 16,
+    marginVertical: 10,
   }
 });

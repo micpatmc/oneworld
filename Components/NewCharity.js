@@ -129,7 +129,7 @@ export default NewCharity = ({setNewForm}) => {
                 <TextInput style={styles.input} onChangeText={setResponse2} placeholder="Description" placeholderTextColor={'#de7c7c'}/>
                 <TextInput style={styles.input} onChangeText={setResponse3} placeholder="Type" placeholderTextColor={'#de7c7c'}/>
                 <TextInput style={styles.input} onChangeText={setResponse4} placeholder="Location" placeholderTextColor={'#de7c7c'}/>
-                <TextInput style={styles.input} onChangeText={setResponse5} placeholder="Website" placeholderTextColor={'#de7c7c'}/>
+                <TextInput style={styles.input} onChangeText={setResponse5} placeholder="Website" placeholderTextColor={'gray'}/>
                 <TouchableOpacity onPress={onSubmission} style={styles.button}>
                     <Text style={styles.text}> Submit </Text>
                 </TouchableOpacity>          
