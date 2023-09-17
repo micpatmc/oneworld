@@ -29,7 +29,7 @@ const getColor = (type) => {
   }
 }
 
-export default function ScreenMap({data, handleFavoriteClick, filter}) {
+export default function ScreenMap({data, handleFavoriteClick, filter, favorites}) {
   
   const openUrl = async(url) => {
     const isSupported = await Linking.canOpenURL(url);
@@ -39,6 +39,7 @@ export default function ScreenMap({data, handleFavoriteClick, filter}) {
       console.log("Can't open url");
     }
   }
+
   return (
     <View style={styles.container}>
       <MapView 
@@ -68,7 +69,12 @@ export default function ScreenMap({data, handleFavoriteClick, filter}) {
                     <Text style={styles.calloutURL} onPress={() => Linking.openURL(`${value.Website}`)}>{'\n'}View Webpage</Text>
                     <Text style={styles.text}>{value.City}</Text>
                     <TouchableOpacity style={styles.favorite} onPress={() => handleFavoriteClick(value.Name)}>
-                      <FontAwesomeIcon icon={ faStar } style={styles.star} size={ 26 } color={ 'gold' } />
+                      {
+                      favorites.has(value.Name) ?
+                        <FontAwesomeIcon icon={ faStar } style={styles.star} size={ 26 } color={ 'gold' } />
+                        :
+                        <FontAwesomeIcon icon={ faStar } style={styles.star} size={ 26 } color={ 'gray' } />
+                      }
                     </TouchableOpacity>
                   </View>
                   <View style={styles.arrowBorder}/>

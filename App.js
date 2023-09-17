@@ -52,7 +52,7 @@ export default function App() {
       {searchResults.length == 0 ?
         <>
           {newForm && <NewCharity setNewForm={setNewForm}/>}
-          <ScreenMap data={data} handleFavoriteClick={handleFavoriteClick} filter={filter}/>
+          <ScreenMap data={data} handleFavoriteClick={handleFavoriteClick} filter={filter} favorites={favorites}/>
         </>:
         <ScrollView showsVerticalScrollIndicator={false}>
           {
