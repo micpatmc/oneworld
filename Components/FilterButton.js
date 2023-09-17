@@ -1,5 +1,5 @@
 import { TouchableOpacity, Text, StyleSheet, Image } from "react-native";
-import { markerZoom } from "./Map";
+import { markerZoom } from "./ScreenMap";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 
 const styles = StyleSheet.create({

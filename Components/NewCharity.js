@@ -1,107 +1,140 @@
-import React, {useState} from 'react';
-import {Text, View, StyleSheet, TextInput} from 'react-native';
-
-
-var array = [];
+import React, { useState, useRef, useEffect } from "react"
+import { Alert, Animated, TextInput, StyleSheet, View, Text, TouchableOpacity, ScrollView } from "react-native";
+import { faX } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 
 const styles = StyleSheet.create({
-    style1: {
+    page: {
         position: 'absolute',
-        backgroundColor: 'white',
         height: "100%",
         width: "100%",
+        backgroundColor: "#fff",
+        zIndex: 1,
+        alignItems: 'center',
+        paddingVertical: 100,
+        paddingHorizontal: 50,
+    },
+    container: {
         flex: 1,
-        zIndex: 2
+        justifyContent: "space-between",
     },
-    style2: {
-        backgroundColor: 'grey',
-        height: 200,
-        width: 400,
-        flex: 1
+    input: {
+        width:'100%',
+        height: 50,
+        borderRadius: 5,
+        paddingHorizontal: 5,
+        borderBottomWidth: 4,
+        borderLeftWidth: 4,
     },
-    container: { 
-        flex: 1,
-        alignItems: "center"
-    }
-});
-
-const textStyles = StyleSheet.create({
-    style1: {
-        color: "black",
-        fontSize: 30,
-        textAlign: "left",
-        paddingHorizontal: 30,
-        paddingVertical: 100
+    button: {
+        height: 75,
+        borderRadius: 5,
+        backgroundColor: 'black',
+        alignItems: 'center',
+        justifyContent: 'center',
     },
-    style2: {
-        color: "grey",
-        fontSize: 10,
-        textAlign: "left",
-        margin: 10, 
+    title: {
+        alignItems: 'center',
+    },
+    text: {
+        color: 'white',
+        fontSize: 50,
+    },
+    icon: {
+        position:'absolute',
+        top: 60,
+        right: 50,
     }
 })
 
-const NewCharity = () => {
-    const [message1, setMessage1] = useState("");
-    const [message2, setMessage2] = useState("");
-    const [message3, setMessage3] = useState("");
-    const [message4, setMessage4] = useState("");
-    const [message5, setMessage5] = useState("");
-  return ( 
-    <View style = {styles.style1}>
-        <Text style = {textStyles.style1}> Looking to put your Charity on the map?  </Text>
-        <Text style = {textStyles.style2}> Name:  </Text>
-        <View style = {styles.container}>
-        <TextInput 
-                placeholder="enter your charity name here"
-                value={message1}
-                onChangeText={(text) => setMessage1(text)}
-                onSubmitEditing={() => array.push(message1)}
-                style={{height: 40, borderColor: 'gray', borderWidth: 1, width: 300, }}
-            />
-        </View>
-        <Text style = {textStyles.style2}> Tagline:  </Text>
-        <View style = {styles.container}>
-        <TextInput 
-                placeholder="enter your charity tagline here"
-                value={message2}
-                onChangeText={(text) => setMessage2(text)}
-                onSubmitEditing={() => array.push(message2)}
-                style={{height: 40, borderColor: 'gray', borderWidth: 1, width: 300, }}
-            />
-        </View>
-        <Text style = {textStyles.style2}> Type:  </Text>
-        <View style = {styles.container}>
-        <TextInput 
-                placeholder="enter your charity type here"
-                value={message3}
-                onChangeText={(text) => setMessage3(text)}
-                onSubmitEditing={() => array.push(message3)}
-                style={{height: 40, borderColor: 'gray', borderWidth: 1, width: 300, }}
-            />
-        </View>
-        <Text style = {textStyles.style2}> Website:  </Text>
-        <View style = {styles.container}>
-        <TextInput 
-                placeholder="enter your website here"
-                value={message4}
-                onChangeText={(text) => setMessage4(text)}
-                onSubmitEditing={() => array.push(message4)}
-                style={{height: 40, borderColor: 'gray', borderWidth: 1, width: 300, }}
-            />
-        </View>
-        <Text style = {textStyles.style2}> Address:  </Text>
-        <View style = {styles.container}>
-        <TextInput 
-                placeholder="enter your address info here"
-                value={message5}
-                onChangeText={(text) => setMessage5(text)}
-                onSubmitEditing={() => (array.push(message5) && alert(`Congratulations on configuring ${message1}`))}
-                style={{height: 40, borderColor: 'gray', borderWidth: 1, width: 300, }}
-            />
-        </View>
-    </View >
-  );
-};
+export default NewCharity = ({setNewForm}) => {
+    const [response1, setResponse1] = useState('');
+    const [response2, setResponse2] = useState('');
+    const [response3, setResponse3] = useState('');
+    const [response4, setResponse4] = useState('');
+    const [response5, setResponse5] = useState('');
+    const fadeAnim = useRef(new Animated.Value(0)).current
 
-export default NewCharity;
+    useEffect(() => {
+        Animated.timing(fadeAnim, {
+            toValue: 1,
+            duration: 200,
+            useNativeDriver: true,
+        }).start();
+    }, [fadeAnim]);
+
+    const onSubmission = () => {
+        if (response1 == '') {
+            Alert.alert('Please enter a charity name.', '', [
+                {
+                    text: 'Ok',
+                    isPreferred: true,
+                }
+            ]
+            );
+            return
+        }
+        if (response2 == '') {
+            Alert.alert('Please enter a tagline.', '', [
+                {
+                    text: 'Ok',
+                    isPreferred: true,
+                }
+            ]
+            );
+            return
+        }
+        if (response3 == '') {
+            Alert.alert('Please enter a charity type.', '', [
+                {
+                    text: 'Ok',
+                    isPreferred: true,
+                }
+            ]
+            );
+            return
+        }
+        if (response4 == '') {
+            Alert.alert('Please enter a location.', '', [
+                {
+                    text: 'Ok',
+                    isPreferred: true,
+                }
+            ]
+            );
+            return
+        }
+
+        setResponse1('');
+        setResponse2('');
+        setResponse3('');
+        setResponse4('');
+        setResponse5('');
+        Alert.alert('Request Submitted!', '', [
+            {
+                text: 'Ok',
+                onPress: () => { setNewForm(false) },
+            }
+        ]
+        );
+    }
+
+    return (
+        <Animated.View View style={{...styles.page, opacity: fadeAnim}}>
+            <TouchableOpacity style={styles.icon} onPress={() => {setNewForm(false)}}><FontAwesomeIcon icon={ faX }/></TouchableOpacity>
+            <ScrollView  showsVerticalScrollIndicator={false} automaticallyAdjustKeyboardInsets={true} contentContainerStyle={styles.container}>
+                <View style={styles.title}>
+                    <Text style={{fontSize: 30}}>Register Your Charity</Text>
+                </View>
+                <TextInput style={styles.input} onChangeText={setResponse1} placeholder="Charity Name" placeholderTextColor={'#de7c7c'}/>
+                <TextInput style={styles.input} onChangeText={setResponse2} placeholder="Tagline" placeholderTextColor={'#de7c7c'}/>
+                <TextInput style={styles.input} onChangeText={setResponse3} placeholder="Type" placeholderTextColor={'#de7c7c'}/>
+                <TextInput style={styles.input} onChangeText={setResponse4} placeholder="Location" placeholderTextColor={'#de7c7c'}/>
+                <TextInput style={styles.input} onChangeText={setResponse5} placeholder="Website"/>
+                <TouchableOpacity onPress={onSubmission} style={styles.button}>
+                    <Text style={styles.text}> Apply! </Text>
+                </TouchableOpacity>          
+            </ScrollView>
+        </Animated.View>
+    );
+}
