@@ -15,19 +15,30 @@ const getColor = (type) => {
     case 'Disaster Relief':
       return 'blue'
     case 'Impoverished Areas':
-      return 'purple'
+      return 'brown'
     case 'Social Justice':
-      return 'green'
+      return 'gray'
     case 'Medical':
       return 'red'
     case 'Animal Relief':
-      return 'brown'
+      return 'orange'
+    case 'Education':
+      return 'green'
     default:
-      return 'yellow'
+      return 'black'
   }
 }
 
 export default function ScreenMap({data, handleFavoriteClick, filter}) {
+  
+  const openUrl = async(url) => {
+    const isSupported = await Linking.canOpenURL(url);
+    if (isSupported) {
+      await Linking.openURL(url)
+    } else {
+      console.log("Can't open url");
+    }
+  }
   return (
     <View style={styles.container}>
       <MapView 
@@ -54,7 +65,7 @@ export default function ScreenMap({data, handleFavoriteClick, filter}) {
                     <View style={{maxHeight:120}}>
                       <Card.Image style={styles.calloutImage} source={{uri: value.Image[0]}}/>
                     </View>
-                    <Text style={styles.calloutURL}>{'\n'}{value.Website}</Text>
+                    <Text style={styles.calloutURL} onPress={() => Linking.openURL(`${value.Website}`)}>{'\n'}View Webpage</Text>
                     <Text style={styles.text}>{value.City}</Text>
                     <TouchableOpacity style={styles.favorite} onPress={() => handleFavoriteClick(value.Name)}>
                       <FontAwesomeIcon icon={ faStar } style={styles.star} size={ 26 } color={ 'gold' } />
