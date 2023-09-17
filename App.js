@@ -42,7 +42,6 @@ export default function App() {
       return
     }
     setFilter(newFilter);
-    console.log(newFilter)
   }
 
   const hideSplashScreen = () => {

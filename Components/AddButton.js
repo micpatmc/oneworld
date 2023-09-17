@@ -5,8 +5,8 @@ const AddButton = ({setNewForm}) => {
         <TouchableOpacity 
             style={{
                 position: 'absolute',
-                backgroundColor: '#fff',
-                bottom: 60,
+                backgroundColor: 'transparent',
+                bottom: 65,
                 right: 25,
                 width: 50,
                 height: 50,
@@ -14,14 +14,13 @@ const AddButton = ({setNewForm}) => {
                 justifyContent: 'center',
                 alignItems: 'center',
                 borderColor: "#808080",
-                borderWidth: 3,
                 zIndex: 1
             }} onPress={() => setNewForm(true)}>
             <Image
-                source={(require('../assets/plus.png'))}
+                source={(require('../assets/oneworld_logo.png'))}
                 style={{
-                    width: 20,
-                    height: 20
+                    width: 75,
+                    height: 75
                 }}
             />
 

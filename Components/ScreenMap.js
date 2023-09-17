@@ -66,7 +66,7 @@ export default function ScreenMap({data, handleFavoriteClick, filter, favorites}
                     <View style={{maxHeight:120}}>
                       <Card.Image style={styles.calloutImage} source={{uri: value.Image[0]}}/>
                     </View>
-                    <Text style={styles.calloutURL} onPress={() => Linking.accessURL(`${value.Website}`)}>{'\n'}View Webpage</Text>
+                    <Text style={styles.calloutURL}>{'\n'}View Webpage</Text>
                     <Text style={styles.text}>{value.City}</Text>
                     <TouchableOpacity style={styles.favorite} onPress={() => handleFavoriteClick(value.Name)}>
                       {
@@ -82,7 +82,7 @@ export default function ScreenMap({data, handleFavoriteClick, filter, favorites}
                 </View>
               </Callout>
             </Marker>
-            ) : <View></View> // WIP
+            ) : <View key={index}></View> // WIP
           })
         }
       </MapView>
