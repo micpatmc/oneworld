@@ -1,13 +1,15 @@
 import React from 'react';
-import { StyleSheet, View, Text, Image } from 'react-native';
+import { StyleSheet, View, Text, Image, TouchableOpacity } from 'react-native';
 import MapView, { PROVIDER_GOOGLE, Marker, Callout, Linking } from 'react-native-maps';
+import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 
 export const markerZoom = ({zoomId}) => {
   if (zoomId == "1")
-    this.map.fitToSuppliedMarkers(['c1','c2']);
+    this.map.fitToSuppliedMarkers(['en-1','en-2']);
 }
 
-export default function Map() {
+export default function Map({data}) {
   return (
     <View style={styles.container}>
       <MapView 
@@ -15,13 +17,55 @@ export default function Map() {
         style={styles.map}
         // provider={PROVIDER_GOOGLE}
       >
-        <Marker
+        {data.map((value, index) => {
+          return (
+            <Marker
+              coordinate={{
+                latitude: parseInt(value.Latitude),
+                longitude: parseInt(value.Longitude),
+              }}
+              identifier={'en-1'}
+              key={index}
+            >
+              <Callout tooltip>
+                <View>
+                  {console.log(parseInt(value.Latitude) + '\n')}
+                  {console.log(parseInt(value.Longitude) + '\n')}
+                  <View style={styles.calloutBubble}>
+                    <Text style={styles.textMain}>{value.Name}</Text>
+                    <Text style={styles.textTagline}>{value.Tagline}</Text>
+                    <Text style={[styles.textType, { color: 'red' }]}>{value.Type} {'\n'}</Text>
+                    <Image
+                      style={styles.calloutImage}
+                      source={{uri: value.Image[0]}}
+                    />
+                    <Text 
+                      style={styles.calloutURL}
+                      onPress={() => {environmentZoom()}}
+                    >
+                        {'\n'}{value.Website}
+                    </Text>
+                    <Text style={styles.text}>{value.Location}</Text>
+                    <TouchableOpacity style={styles.favorite}>
+                      <FontAwesomeIcon icon={ faStar } style={styles.star} size={ 26 } color={ 'gold' } />
+                    </TouchableOpacity>
+                  </View>
+                  <View style={styles.arrowBorder}/>
+                  <View style={styles.arrow}/>
+                </View>
+              </Callout>
+            </Marker>
+            );
+          })
+        }
+
+        {/* <Marker
           // onPress={() => {this.map.fitToSuppliedMarkers(['c1'])}}
           coordinate={{
             latitude: 37,
             longitude: -120,
           }}
-          identifier={'c1'}
+          identifier={'en-1'}
         >
           <Callout tooltip>
             <View>
@@ -41,6 +85,9 @@ export default function Map() {
                 </Text>
                 <Text style={styles.text}>123 Children's Street</Text>
                 <Text style={styles.text}>California, USA</Text>
+                <TouchableOpacity style={styles.favorite}>
+                  <FontAwesomeIcon icon={ faStar } style={styles.star} size={ 26 } color={ 'gold' } />
+                </TouchableOpacity>
               </View>
               <View style={styles.arrowBorder}/>
               <View style={styles.arrow}/>
@@ -52,7 +99,7 @@ export default function Map() {
             latitude: 42,
             longitude: -100,
           }}
-          identifier={'c2'}
+          identifier={'en-2'}
         >
           <Callout tooltip>
             <View>
@@ -77,7 +124,7 @@ export default function Map() {
               <View style={styles.arrow}/>
             </View>
           </Callout>
-        </Marker>
+        </Marker> */}
       </MapView>
     </View>
   );
@@ -138,6 +185,27 @@ const styles = StyleSheet.create({
     textAlign: 'left',
     fontSize: 16,
     marginBottom: 5
+  },
+  favorite: {
+    position: 'absolute',
+    height: 45,
+    width: 45,
+    right: 7,
+    bottom: 7,
+    backgroundColor: '#000',
+    alignContent: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#aaaaaa',
+    borderColor: "#d9d9d9",
+    borderWidth: 2.5,
+    shadowOffset: {width: -2, height: 4},
+    shadowOpacity: 0.1,
+    shadowRadius: 5,
+    borderRadius: '100%'
+  },
+  star: {
+    left: 7,
+    bottom: 1
   },
   arrow: {
     backgroundColor: 'transparent',

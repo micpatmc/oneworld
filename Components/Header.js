@@ -2,8 +2,9 @@ import { Alert, ScrollView, StyleSheet, TouchableOpacity, View, Text } from "rea
 import { SearchBar } from "@rneui/themed";
 import { useState } from "react";
 import FilterButton from "./FilterButton";
-import { faStar, faSchool, faTree, faDog, faChild, faMedkit, faBalanceScale, faHouseChimneyCrack } from "@fortawesome/free-solid-svg-icons";
+import { faStar, faHurricane, faDog, faMedkit, faBalanceScale, faHouseChimneyCrack } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
+import { ToggleFavorite } from "../App";
 
 const height_proportion = '20%';
 
@@ -28,22 +29,6 @@ const styles = StyleSheet.create({
 
 export default function Header({setSearchResults, data}) {
     const [text, setText] = useState(null)
-
-    const onStarPress = () => {
-        Alert.alert('Favorites', 'Awaiting Alain\'s Favorites Page', 
-        [
-            {
-                text: 'Cancel',
-                onPress: () => {console.log('Canceled')},
-                style: 'cancel',
-            },
-            {
-                text: 'OK',
-                onPress: () => {console.log('OK')},
-            }
-        ]
-        );
-    }
 
     const handleSearch = (searchString) => {
         const newSearchResults = data.filter((charity) => {
@@ -83,33 +68,31 @@ export default function Header({setSearchResults, data}) {
                     placeholder="Search"
                     />
                 </View>
-                <TouchableOpacity onPress={ onStarPress } 
+                <TouchableOpacity onPress={() => ToggleFavorite()} 
                     style={{
-                        flex:1, 
-                        marginRight: 20, 
-                        borderRadius: '100%',
                         height: 50,
-                        width: 90,
-                        alignContent: 'center',
+                        width: 50,
+                        borderRadius: "50%",
+                        alignItems: "center",
                         justifyContent: 'center',
+                        marginRight: 20,                         
                         backgroundColor: '#aaaaaa',
                         borderColor: "#d9d9d9",
                         borderWidth: 2.5,
                         shadowOffset: {width: -2, height: 4},
                         shadowOpacity: 0.1,
-                        shadowRadius: 5
+                        shadowRadius: 5,
                         }}
                     >
-                    <FontAwesomeIcon icon={ faStar } style={{left: 6, bottom: 1}} size={ 32 } color={ 'gold' } />
+                    <FontAwesomeIcon icon={ faStar } size={ 32 } color={ 'gold' } />
                 </TouchableOpacity>
             </View>
-            <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={{marginHorizontal: 10, overflow: "hidden"}}>
-                <FilterButton title="Environmental" zoomId="1" imgInfo={faTree}/>
-                <FilterButton title="Education" zoomId="2" imgInfo={faSchool}/>
-                <FilterButton title="Animal Relief" zoomId="3" imgInfo={faDog}/>
-                <FilterButton title="Impoverished Areas" zoomId="4" imgInfo={faHouseChimneyCrack}/>
+            <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={{marginHorizontal:20, overflow: "hidden"}}>
+                <FilterButton title="Disaster Relief" zoomId="1" imgInfo={faHurricane}/>
+                <FilterButton title="Impoverished Areas" zoomId="3" imgInfo={faHouseChimneyCrack}/>
                 <FilterButton title="Social Justice" zoomId="5" imgInfo={faBalanceScale}/>
-                <FilterButton title="Medical" zoomId="6" imgInfo={faMedkit}/>
+                <FilterButton title="Animal Relief" zoomId="2" imgInfo={faDog}/>
+                <FilterButton title="Medical" zoomId="4" imgInfo={faMedkit}/>
             </ScrollView>
         </View>
     );
