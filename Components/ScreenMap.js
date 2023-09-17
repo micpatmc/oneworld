@@ -1,6 +1,6 @@
 import React from 'react';
+import MapView, { Marker, Callout, Linking } from 'react-native-maps';
 import { StyleSheet, View, Text, Image, TouchableOpacity } from 'react-native';
-import MapView, { PROVIDER_GOOGLE, Marker, Callout, Linking } from 'react-native-maps';
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 
@@ -9,28 +9,25 @@ export const markerZoom = ({zoomId}) => {
     this.map.fitToSuppliedMarkers(['en-1','en-2']);
 }
 
-export default function Map({data}) {
+export default function ScreenMap({data, handleFavoriteClick}) {
   return (
     <View style={styles.container}>
       <MapView 
         ref={map => {this.map = map}}
-        style={styles.map}
-        // provider={PROVIDER_GOOGLE}
+        style={styles.map}  
       >
-        {data.map((value, index) => {
+        {data.map((value, index) => {         
           return (
             <Marker
-              coordinate={{
-                latitude: parseInt(value.Latitude),
-                longitude: parseInt(value.Longitude),
+            coordinate={{
+               latitude: value.Latitude, 
+               longitude: value.Longitude,
               }}
-              identifier={'en-1'}
-              key={index}
+            identifier={value.Name}
+            key={index}
             >
               <Callout tooltip>
                 <View>
-                  {console.log(parseInt(value.Latitude) + '\n')}
-                  {console.log(parseInt(value.Longitude) + '\n')}
                   <View style={styles.calloutBubble}>
                     <Text style={styles.textMain}>{value.Name}</Text>
                     <Text style={styles.textTagline}>{value.Tagline}</Text>
@@ -46,7 +43,7 @@ export default function Map({data}) {
                         {'\n'}{value.Website}
                     </Text>
                     <Text style={styles.text}>{value.Location}</Text>
-                    <TouchableOpacity style={styles.favorite}>
+                    <TouchableOpacity style={styles.favorite} onPress={() => handleFavoriteClick(value.Name)}>
                       <FontAwesomeIcon icon={ faStar } style={styles.star} size={ 26 } color={ 'gold' } />
                     </TouchableOpacity>
                   </View>
@@ -58,73 +55,6 @@ export default function Map({data}) {
             );
           })
         }
-
-        {/* <Marker
-          // onPress={() => {this.map.fitToSuppliedMarkers(['c1'])}}
-          coordinate={{
-            latitude: 37,
-            longitude: -120,
-          }}
-          identifier={'en-1'}
-        >
-          <Callout tooltip>
-            <View>
-              <View style={styles.calloutBubble}>
-                <Text style={styles.textMain}>Children's Charity</Text>
-                <Text style={styles.textTagline}>We donate to children in need.</Text>
-                <Text style={[styles.textType, { color: 'red' }]}>Humanitarian {'\n'}</Text>
-                <Image
-                  style={styles.calloutImage}
-                  source={require('../assets/child.png')}
-                />
-                <Text 
-                  style={styles.calloutURL}
-                  onPress={() => {environmentZoom()}}
-                >
-                    {'\n'}http://wesupportchildren.com
-                </Text>
-                <Text style={styles.text}>123 Children's Street</Text>
-                <Text style={styles.text}>California, USA</Text>
-                <TouchableOpacity style={styles.favorite}>
-                  <FontAwesomeIcon icon={ faStar } style={styles.star} size={ 26 } color={ 'gold' } />
-                </TouchableOpacity>
-              </View>
-              <View style={styles.arrowBorder}/>
-              <View style={styles.arrow}/>
-            </View>
-          </Callout>
-        </Marker>
-        <Marker
-          coordinate={{
-            latitude: 42,
-            longitude: -100,
-          }}
-          identifier={'en-2'}
-        >
-          <Callout tooltip>
-            <View>
-              <View style={styles.calloutBubble}>
-                <Text style={styles.textMain}>Save the Trees</Text>
-                <Text style={styles.textTagline}>Save the trees one at a time.</Text>
-                <Text style={[styles.textType, { color: 'green' }]}>Environment {'\n'}</Text>
-                <Image
-                  style={styles.calloutImage}
-                  source={require('../assets/tree.png')}
-                />
-                <Text 
-                  style={styles.calloutURL}
-                  onPress={() => {environmentZoom()}}
-                >
-                    {'\n'}http://savethetrees.com
-                </Text>
-                <Text style={styles.text}>456 Tree Street</Text>
-                <Text style={styles.text}>Nebraska, USA</Text>
-              </View>
-              <View style={styles.arrowBorder}/>
-              <View style={styles.arrow}/>
-            </View>
-          </Callout>
-        </Marker> */}
       </MapView>
     </View>
   );

@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
     header: {
         backgroundColor: '#fff',
         height: height_proportion,
-        paddingTop: 50,
+        paddingTop: 40,        
     },
     searchArea: {
         flex:1,  
@@ -19,31 +19,13 @@ const styles = StyleSheet.create({
         alignItems: 'center', 
         flexDirection: 'row',
         margin: 20,
-    },
-    searchResult: {
+        borderRadius: 5,
         borderColor: 'red',
-        borderWidth: 5,
-    }
+    },
 });
 
-export default function Header({setSearchResults, data}) {
+export default function Header({toggleFavorites, setSearchResults, data}) {
     const [text, setText] = useState(null)
-
-    const onStarPress = () => {
-        Alert.alert('Favorites', 'Awaiting Alain\'s Favorites Page', 
-        [
-            {
-                text: 'Cancel',
-                onPress: () => {console.log('Canceled')},
-                style: 'cancel',
-            },
-            {
-                text: 'OK',
-                onPress: () => {console.log('OK')},
-            }
-        ]
-        );
-    }
 
     const handleSearch = (searchString) => {
         const newSearchResults = data.filter((charity) => {
@@ -83,7 +65,7 @@ export default function Header({setSearchResults, data}) {
                     placeholder="Search"
                     />
                 </View>
-                <TouchableOpacity onPress={ onStarPress } 
+                <TouchableOpacity onPress={ toggleFavorites } 
                     style={{
                         height: 50,
                         width: 50,

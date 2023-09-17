@@ -1,6 +1,6 @@
 import { View, Text, TouchableOpacity, Image } from 'react-native';
 
-const AddButton = () => {
+const AddButton = ({setNewForm}) => {
     return (
         <TouchableOpacity 
             style={{
@@ -8,20 +8,20 @@ const AddButton = () => {
                 backgroundColor: '#fff',
                 bottom: 60,
                 right: 25,
-                width: 80,
-                height: 80,
+                width: 50,
+                height: 50,
                 borderRadius: '100%',
                 justifyContent: 'center',
                 alignItems: 'center',
-                borderColor: "#d9d9d9",
-                borderWidth: 4,
+                borderColor: "#808080",
+                borderWidth: 3,
                 zIndex: 1
-            }}>
+            }} onPress={() => setNewForm(true)}>
             <Image
                 source={(require('../assets/plus.png'))}
                 style={{
-                    width: 40,
-                    height: 40
+                    width: 20,
+                    height: 20
                 }}
             />
 

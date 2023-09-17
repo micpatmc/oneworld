@@ -1,30 +1,55 @@
 import { StatusBar } from 'expo-status-bar';
 import { Keyboard, ScrollView, StyleSheet, Text, TouchableWithoutFeedback, View} from 'react-native';
 import { useState } from 'react';
-import Map from './Components/Map';
-import Header from './Components/Header';
 import { Button, Card } from '@rneui/themed';
 import data from "./data.json"
-import Favorite from './Components/favorite';
+import ScreenMap from './Components/ScreenMap';
+import Header from './Components/Header';
 import NewCharity from './Components/NewCharity';
 import AddButton from './Components/AddButton'
+import FavoriteList from './Components/FavoriteList';
 
 export default function App() {
   const [searchResults, setSearchResults] = useState([])
+  const [newForm, setNewForm] = useState(false);
+  const [showFavorites, setShowFavorites] = useState(false)
+  const [favorites, setFavorites] = useState(new Set())
+
+  const toggleFavorites = () => {
+    const newShowFavorites = !showFavorites;
+    setShowFavorites(newShowFavorites);
+  }
+
+  const handleFavoriteClick = (charityName) => {
+    const newFavorites = new Set(favorites);
+    if (newFavorites.has(charityName)) {
+      newFavorites.delete(charityName);
+    } else {
+      newFavorites.add(charityName);
+    }
+    setFavorites(newFavorites);
+  }
 
   return (
     <View style={styles.container}>
-      <Header setSearchResults={setSearchResults} data={data}/>
-    <AddButton />
+      <Header toggleFavorites={toggleFavorites} setSearchResults={setSearchResults} data={data}/>
+      <AddButton setNewForm={setNewForm}/>
+
+      {
+        showFavorites ? <FavoriteList favorites={favorites} data={data}/> : <></>
+      }
 
       { /* Determine whether to render map or search results */ }
       {searchResults.length == 0 ?
-        <Map data={data}/> :
+        <>
+          {newForm && <NewCharity setNewForm={setNewForm}/>}
+          <ScreenMap data={data} handleFavoriteClick={handleFavoriteClick}/>
+        </>:
         <ScrollView showsVerticalScrollIndicator={false}>
           {
             searchResults.map((value, index) => {
               return (
-                <Card containerStyle={{borderRadius:5, width: "100%"}} key={index}>
+                <Card containerStyle={{borderRadius:5}} key={index}>
                   <Card.Image style={styles.cardImage} source={{uri: value.Image[0]}}/>
                   <Card.Title>{value.Name}</Card.Title>
                   <Text style={{textAlign:'center', marginBottom: 20}}>{value.Tagline}</Text>

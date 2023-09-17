@@ -6,8 +6,8 @@
         "Image": ["https://assets.tiltify.com/uploads/cause/image/21/doctors-without-borders-msf-image-1587513225216.jpg"],
         "Website": "https://www.doctorswithoutborders.org/",
         "City": "ShellHacks",
-        "Longitude": "123",
-        "Latitude": "123"
+        "Latitude": -20,
+        "Longitude": 100
         
     },
     {
@@ -17,8 +17,8 @@
         "Image": ["https://www.paho.org/sites/default/files/saint-jude-mexico-nina_1.jpg"],
         "Website": "https://www.stjude.org/",
         "City": "ShellHacks",
-        "Longitude": "123",
-        "Latitude": "123"
+        "Latitude": -50,
+        "Longitude": 100
     },
     {
         "Name": "American Red Cross",
@@ -30,8 +30,8 @@
                  ],
         "Website": "https://www.stjude.org/",
         "City": "Port Charlotte, Florida",
-        "Longitude": "26.898047",
-        "Latitude": "-82.045993" 
+        "Latitude": -40,
+        "Longitude": 100
     },
     {
         "Name": "Children's Charity",
@@ -40,8 +40,8 @@
         "Image": ["data:image/jpeg;base64,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"],
         "Website": "http://wesupportchildren.com",
         "City": "San Francisco, California, USA",
-        "Longitude": 37,
-        "Latitude": -120
+        "Latitude": -30,
+        "Longitude": 100
     },
     {
         "Name": "Save the Trees",
@@ -50,8 +50,8 @@
         "Image": ["https://media.springernature.com/lw685/springer-static/image/art%3A10.1038%2Fs41477-019-0374-3/MediaObjects/41477_2019_374_Figa_HTML.jpg?as=webp"],
         "Website": "http://savethetrees.com",
         "City": "Nebraska City, Nebraska, USA",
-        "Longitude": 42,
-        "Latitude": -100
+        "Latitude": 26.005769260451167, 
+        "Longitude": -80.27320058676919
     }
 
 
