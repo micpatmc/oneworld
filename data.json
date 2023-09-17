@@ -89,18 +89,18 @@
         "Longitude": "10.776486"
     },
 
-    {
-        "Name": "Wuqu' Kawoq",
-        "Tagline": "Support guatemalans suffering through malnutrition",
-        "Type": "Impoverished Areas",
-        "Image": ["https://seedsforafuture.org/wp-content/uploads/2022/01/The-Challenge-of-Chronic-Malnutrion-in-Gautemala.jpg",
-                    "https://www.chaireunesco-adm.com/local/cache-vignettes/L521xH651/fig_1_sowhat_21_en-9d19b.png?1683645392"
-                 ],
-        "Website": "https://givingcompass.org/project/7107/fight-rising-malnutrition-in-rural-guatemala",
-        "City": "Guatemala, Central America",
-        "Latitude": "15.492527" ,
-        "Longitude": "-90.168862"
-    },
+    // {
+    //     "Name": "Wuqu' Kawoq",
+    //     "Tagline": "Support guatemalans suffering through malnutrition",
+    //     "Type": "Impoverished Areas",
+    //     "Image": ["https://seedsforafuture.org/wp-content/uploads/2022/01/The-Challenge-of-Chronic-Malnutrion-in-Gautemala.jpg",
+    //                 "https://www.chaireunesco-adm.com/local/cache-vignettes/L521xH651/fig_1_sowhat_21_en-9d19b.png?1683645392"
+    //              ],
+    //     "Website": "https://givingcompass.org/project/7107/fight-rising-malnutrition-in-rural-guatemala",
+    //     "City": "Guatemala, Central America",
+    //     "Latitude": "15.492527" ,
+    //     "Longitude": "-90.168862"
+    // },
 
 
     {
@@ -187,18 +187,18 @@
         "Longitude": "100.992538"
     },
 
-    {
-        "Name": "The SOAR Foundation",
-        "Tagline": "Help fund scholarships for students in china",
-        "Type": "Education",
-        "Image": [  "https://content.fortune.com/wp-content/uploads/2019/12/GettyImages-1191628288.jpg",
-                    "https://worldcrunch.com/media-library/young-students-in-china-holding-up-their-hands.jpg?id=27477043&width=2000&height=1500&quality=85&coordinates=0%2C0%2C390%2C0"
-                 ],
-        "Website": "https://www.globalgiving.org/projects/soar-foundation-fund-scholarships-in-rural-china/",
-        "City": "China, Asia",
-        "Latitude": "35.000074" ,
-        "Longitude": "104.999927"
-    },
+    // {
+    //     "Name": "The SOAR Foundation",
+    //     "Tagline": "Help fund scholarships for students in china",
+    //     "Type": "Education",
+    //     "Image": [  "https://content.fortune.com/wp-content/uploads/2019/12/GettyImages-1191628288.jpg",
+    //                 "https://worldcrunch.com/media-library/young-students-in-china-holding-up-their-hands.jpg?id=27477043&width=2000&height=1500&quality=85&coordinates=0%2C0%2C390%2C0"
+    //              ],
+    //     "Website": "https://www.globalgiving.org/projects/soar-foundation-fund-scholarships-in-rural-china/",
+    //     "City": "China, Asia",
+    //     "Latitude": "35.000074" ,
+    //     "Longitude": "104.999927"
+    // },
 
     {
         "Name": "Global Education Campaign",
@@ -374,13 +374,13 @@
 
     {
         "Name": "St.Jude Children's Hospital",
-        "Tagline": "This hospital is on of the most popular pediatric cancer and research center",
+        "Tagline": "This hospital is one of the most popular pediatric cancer and research center",
         "Type": "Medical",
         "Image": [  "https://www.borgenmagazine.com/wp-content/uploads/2017/10/Jennifer-Aniston.jpg",
                     "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.inc.com%2Fjacob-morgan%2Fhow-st-jude-childrens-research-hospital-creates-a-desirable-place-to-work.html&psig=AOvVaw2XBsoJ62Ygpfn9RZHU9bvl&ust=1695013667447000&source=images&cd=vfe&opi=89978449&ved=0CA8QjRxqFwoTCJjAxo7wsIEDFQAAAAAdAAAAABAJ"
                  ],
         "Website": "https://www.stjude.org/donate/donate-to-st-jude.html?frequency_selected=1&sc_dcm=58700008005633531&sc_cid=kwp&sc_cat=b&ds_rl=1285465&ds_rl=1291300&ds_rl=1290690&gclid=CjwKCAjwpJWoBhA8EiwAHZFzfhWL9k7TwptJ1k-UFsqnVv7hbY_jo308NLh0jcVfJ_1Cfu6ARQAOWBoCJ9kQAvD_BwE&gclsrc=aw.ds ",
-        "City": "Houston, TX",
+        "City": "Houston, Texas",
         "Latitude": "29.751434" ,
         "Longitude": "-95.454401"
     },
@@ -393,7 +393,7 @@
                     "https://i.guim.co.uk/img/media/874443d5eddeb3ce72d90f38949ac15f209f2750/0_115_3500_2100/master/3500.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdG8tYWdlLTIwMTgucG5n&s=b6a90a313b363681a1f4bca555a8390c"
                  ],
         "Website": "https://www.gosh.org/",
-        "City": "London, Europe",
+        "City": "London",
         "Latitude": "51.5073359" ,
         "Longitude": "-0.12765"
     },

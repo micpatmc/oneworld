@@ -31,7 +31,7 @@ const getColor = (type) => {
 
 export default function ScreenMap({data, handleFavoriteClick, filter, favorites}) {
   
-  const openUrl = async(url) => {
+  const accessURL = async(url) => {
     const isSupported = await Linking.canOpenURL(url);
     if (isSupported) {
       await Linking.openURL(url)
@@ -62,11 +62,11 @@ export default function ScreenMap({data, handleFavoriteClick, filter, favorites}
                   <View style={styles.calloutBubble}>
                     <Text style={styles.textMain}>{value.Name}</Text>
                     <Text style={styles.textTagline}>{value.Tagline}</Text>
-                    <Text style={[styles.textType, { color: 'red' }]}>{value.Type} {'\n'}</Text>
+                    <Text style={[styles.textType, { color: getColor(value.Type)}]}>{value.Type} {'\n'}</Text>
                     <View style={{maxHeight:120}}>
                       <Card.Image style={styles.calloutImage} source={{uri: value.Image[0]}}/>
                     </View>
-                    <Text style={styles.calloutURL} onPress={() => Linking.openURL(`${value.Website}`)}>{'\n'}View Webpage</Text>
+                    <Text style={styles.calloutURL} onPress={() => Linking.accessURL(`${value.Website}`)}>{'\n'}View Webpage</Text>
                     <Text style={styles.text}>{value.City}</Text>
                     <TouchableOpacity style={styles.favorite} onPress={() => handleFavoriteClick(value.Name)}>
                       {
@@ -155,12 +155,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#000',
     alignContent: 'center',
     justifyContent: 'center',
-    backgroundColor: '#aaaaaa',
+    backgroundColor: '#fff',
     borderColor: "#d9d9d9",
     borderWidth: 2.5,
-    shadowOffset: {width: -2, height: 4},
-    shadowOpacity: 0.1,
-    shadowRadius: 5,
     borderRadius: '100%'
   },
   star: {

@@ -23,15 +23,14 @@ const styles = StyleSheet.create({
         height: 50,
         borderRadius: 5,
         paddingHorizontal: 5,
-        borderBottomWidth: 4,
-        borderLeftWidth: 4,
+        borderBottomWidth: 2,
     },
     button: {
         height: 75,
-        borderRadius: 5,
         backgroundColor: 'black',
         alignItems: 'center',
         justifyContent: 'center',
+        borderRadius: '50%',
     },
     title: {
         alignItems: 'center',
@@ -42,8 +41,8 @@ const styles = StyleSheet.create({
     },
     icon: {
         position:'absolute',
-        top: 60,
-        right: 50,
+        top: 65,
+        right: 30,
     }
 })
 
@@ -121,16 +120,16 @@ export default NewCharity = ({setNewForm}) => {
 
     return (
         <Animated.View View style={{...styles.page, opacity: fadeAnim}}>
-            <TouchableOpacity style={styles.icon} onPress={() => {setNewForm(false)}}><FontAwesomeIcon icon={ faX }/></TouchableOpacity>
+            <TouchableOpacity style={styles.icon} onPress={() => {setNewForm(false)}}><FontAwesomeIcon size={ 25 } icon={ faX }/></TouchableOpacity>
             <ScrollView  showsVerticalScrollIndicator={false} automaticallyAdjustKeyboardInsets={true} contentContainerStyle={styles.container}>
                 <View style={styles.title}>
-                    <Text style={{fontSize: 30}}>Register Your Charity</Text>
+                    <Text style={{fontSize: 35}}>Register Your Charity</Text>
                 </View>
                 <TextInput style={styles.input} onChangeText={setResponse1} placeholder="Charity Name" placeholderTextColor={'#de7c7c'}/>
-                <TextInput style={styles.input} onChangeText={setResponse2} placeholder="Tagline" placeholderTextColor={'#de7c7c'}/>
+                <TextInput style={styles.input} onChangeText={setResponse2} placeholder="Description" placeholderTextColor={'#de7c7c'}/>
                 <TextInput style={styles.input} onChangeText={setResponse3} placeholder="Type" placeholderTextColor={'#de7c7c'}/>
                 <TextInput style={styles.input} onChangeText={setResponse4} placeholder="Location" placeholderTextColor={'#de7c7c'}/>
-                <TextInput style={styles.input} onChangeText={setResponse5} placeholder="Website"/>
+                <TextInput style={styles.input} onChangeText={setResponse5} placeholder="Website" placeholderTextColor={'#de7c7c'}/>
                 <TouchableOpacity onPress={onSubmission} style={styles.button}>
                     <Text style={styles.text}> Submit </Text>
                 </TouchableOpacity>          
