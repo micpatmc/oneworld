@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 
 const styles = StyleSheet.create({
     filterButton: {
-        backgroundColor: 'white',
         margin: 10,
         flex: 1,
         flexDirection: 'row',
@@ -24,13 +23,15 @@ const styles = StyleSheet.create({
     },
 });
 
-export default function FilterButton({title, zoomId, imgInfo, iconColor, changeFilter}) {
+export default function FilterButton({title, zoomId, imgInfo, iconColor, changeFilter, filter}) {
+    const active = filter === title;
+    
     const handleClick = () => {
         markerZoom({zoomId});
-        changeFilter();
+        changeFilter(title);
     }
     return (
-        <TouchableOpacity onPress={handleClick} style={styles.filterButton}>
+        <TouchableOpacity onPress={handleClick} style={{...styles.filterButton, backgroundColor: (active) ? '#d1c9c7' : 'white'}}>
             <FontAwesomeIcon icon={imgInfo} style={{right: 5}} size={ 25 } color={ `${iconColor}` } />
             <Text styles={styles.buttonText}>{title}</Text>
         </TouchableOpacity>
