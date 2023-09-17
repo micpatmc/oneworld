@@ -4,7 +4,6 @@ import { useState } from "react";
 import FilterButton from "./FilterButton";
 import { faStar, faHurricane, faDog, faMedkit, faBalanceScale, faHouseChimneyCrack } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
-import { ToggleFavorite } from "../App";
 
 const height_proportion = '20%';
 
@@ -25,7 +24,7 @@ const styles = StyleSheet.create({
     },
 });
 
-export default function Header({toggleFavorites, setSearchResults, data}) {
+export default function Header({toggleFavorites, setSearchResults, data, changeFilter}) {
     const [text, setText] = useState(null)
 
     const handleSearch = (searchString) => {
@@ -86,11 +85,11 @@ export default function Header({toggleFavorites, setSearchResults, data}) {
                 </TouchableOpacity>
             </View>
             <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={{marginHorizontal:20, overflow: "hidden"}}>
-                <FilterButton title="Disaster Relief" zoomId="1" imgInfo={faHurricane}/>
-                <FilterButton title="Impoverished Areas" zoomId="3" imgInfo={faHouseChimneyCrack}/>
-                <FilterButton title="Social Justice" zoomId="5" imgInfo={faBalanceScale}/>
-                <FilterButton title="Animal Relief" zoomId="2" imgInfo={faDog}/>
-                <FilterButton title="Medical" zoomId="4" imgInfo={faMedkit}/>
+                <FilterButton title="Disaster Relief" zoomId="1" imgInfo={faHurricane} changeFilter={() => {changeFilter('Disaster Relief')}}/>
+                <FilterButton title="Impoverished Areas" zoomId="3" imgInfo={faHouseChimneyCrack} changeFilter={() => {changeFilter('Impoverished Areas')}}/>
+                <FilterButton title="Social Justice" zoomId="5" imgInfo={faBalanceScale} changeFilter={() => {changeFilter('Social Justice')}}/>
+                <FilterButton title="Animal Relief" zoomId="2" imgInfo={faDog} changeFilter={() => {changeFilter('Animal Relief')}}/>
+                <FilterButton title="Medical" zoomId="4" imgInfo={faMedkit} changeFilter={() => {changeFilter('Medical')}}/>
             </ScrollView>
         </View>
     );

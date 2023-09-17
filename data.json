@@ -37,8 +37,8 @@
                  ],
         "Website": "https://www.floridadisaster.org/info/Assistance/",
         "City": "Port Charlotte, Florida",
-        "Latitude": "-82.045993", 
-        "Longitude": "26.898047"
+        "Latitude": "26.898047", 
+        "Longitude": "-82.045993"
     },
 
     {
@@ -170,8 +170,8 @@
                  ],
         "Website": "https://www.globalgiving.org/projects/educate-the-next-generation-of-leaders-in-freetown/",
         "City": "Sierra Leone, Africa",
-        "Latitude": "18.316311" ,
-        "Longitude": "-66.112129"
+        "Latitude": "10" ,
+        "Longitude": "0.316311"
     },
 
     {
@@ -422,4 +422,5 @@
         "City": "Seoul, South Korea",
         "Latitude": "37.5666791" ,
         "Longitude": "126.9782914"
+    }
 ]

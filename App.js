@@ -14,6 +14,7 @@ export default function App() {
   const [newForm, setNewForm] = useState(false);
   const [showFavorites, setShowFavorites] = useState(false)
   const [favorites, setFavorites] = useState(new Set())
+  const [filter, setFilter] = useState(null)
 
   const toggleFavorites = () => {
     const newShowFavorites = !showFavorites;
@@ -30,9 +31,17 @@ export default function App() {
     setFavorites(newFavorites);
   }
 
+  const changeFilter = (newFilter) => {
+    if (newFilter == filter) {
+      setFilter(null)
+      return
+    }
+    setFilter(newFilter);
+  }
+
   return (
     <View style={styles.container}>
-      <Header toggleFavorites={toggleFavorites} setSearchResults={setSearchResults} data={data}/>
+      <Header toggleFavorites={toggleFavorites} setSearchResults={setSearchResults} data={data} changeFilter={changeFilter}/>
       <AddButton setNewForm={setNewForm}/>
 
       {
@@ -43,7 +52,7 @@ export default function App() {
       {searchResults.length == 0 ?
         <>
           {newForm && <NewCharity setNewForm={setNewForm}/>}
-          <ScreenMap data={data} handleFavoriteClick={handleFavoriteClick}/>
+          <ScreenMap data={data} handleFavoriteClick={handleFavoriteClick} filter={filter}/>
         </>:
         <ScrollView showsVerticalScrollIndicator={false}>
           {

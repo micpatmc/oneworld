@@ -24,9 +24,13 @@ const styles = StyleSheet.create({
     },
 });
 
-export default function FilterButton({title, zoomId, imgInfo}) {
+export default function FilterButton({title, zoomId, imgInfo, changeFilter}) {
+    const handleClick = () => {
+        markerZoom({zoomId});
+        changeFilter();
+    }
     return (
-        <TouchableOpacity onPress={() => markerZoom({zoomId})} style={styles.filterButton}>
+        <TouchableOpacity onPress={handleClick} style={styles.filterButton}>
             <FontAwesomeIcon icon={imgInfo} style={{right: 5}} size={ 25 } color={ 'black' } />
             <Text styles={styles.buttonText}>{title}</Text>
         </TouchableOpacity>

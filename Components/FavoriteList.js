@@ -27,8 +27,8 @@ export default function FavoriteList({favorites, data}) {
     return ( 
         <Animated.View style={{...styles.container, bottom: slideAnim}}>
             <ScrollView>
-                {[...favorites].map(charityName =>
-                    (<FavoriteButton title={charityName}/>)
+                {[...favorites].map((charityName, key) =>
+                    (<FavoriteButton key={key} title={charityName}/>)
                 )}
             </ScrollView>
         </Animated.View >

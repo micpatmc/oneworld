@@ -1,15 +1,34 @@
 import React from 'react';
 import MapView, { Marker, Callout, Linking } from 'react-native-maps';
-import { StyleSheet, View, Text, Image, TouchableOpacity } from 'react-native';
+import { StyleSheet, View, Text, Image, TouchableOpacity, ScrollView } from 'react-native';
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
+import { Card } from '@rneui/themed';
 
 export const markerZoom = ({zoomId}) => {
   if (zoomId == "1")
     this.map.fitToSuppliedMarkers(['en-1','en-2']);
 }
 
-export default function ScreenMap({data, handleFavoriteClick}) {
+// Color according to type of event
+const getColor = (type) => {
+  switch (type) {
+    case 'Disaster Relief':
+      return 'blue'
+    case 'Impoverished Areas':
+      return 'purple'
+    case 'Social Justice':
+      return 'green'
+    case 'Medical':
+      return 'red'
+    case 'Animal Relief':
+      return 'brown'
+    default:
+      return 'yellow'
+  }
+}
+
+export default function ScreenMap({data, handleFavoriteClick, filter}) {
   return (
     <View style={styles.container}>
       <MapView 
@@ -17,7 +36,7 @@ export default function ScreenMap({data, handleFavoriteClick}) {
         style={styles.map}  
       >
         {data.map((value, index) => {         
-          return (
+          return (!filter || filter == value.Type) ? (
             <Marker
             coordinate={{
                latitude: value.Latitude, 
@@ -25,6 +44,7 @@ export default function ScreenMap({data, handleFavoriteClick}) {
               }}
             identifier={value.Name}
             key={index}
+            pinColor={getColor(value.Type)}
             >
               <Callout tooltip>
                 <View>
@@ -32,17 +52,14 @@ export default function ScreenMap({data, handleFavoriteClick}) {
                     <Text style={styles.textMain}>{value.Name}</Text>
                     <Text style={styles.textTagline}>{value.Tagline}</Text>
                     <Text style={[styles.textType, { color: 'red' }]}>{value.Type} {'\n'}</Text>
-                    <Image
-                      style={styles.calloutImage}
-                      source={{uri: value.Image[0]}}
-                    />
-                    <Text 
-                      style={styles.calloutURL}
-                      onPress={() => {environmentZoom()}}
-                    >
-                        {'\n'}{value.Website}
-                    </Text>
-                    <Text style={styles.text}>{value.Location}</Text>
+                    <View style={{maxHeight:120, borderColor: 'red', borderWidth: 5}}>
+                      <ScrollView>
+                        <Card.Image style={styles.calloutImage} source={{uri: value.Image[0]}}/>
+                        <Card.Image style={styles.calloutImage} source={{uri: value.Image[0]}}/>
+                      </ScrollView>
+                    </View>
+                    <Text style={styles.calloutURL}>{'\n'}{value.Website}</Text>
+                    <Text style={styles.text}>{value.City}</Text>
                     <TouchableOpacity style={styles.favorite} onPress={() => handleFavoriteClick(value.Name)}>
                       <FontAwesomeIcon icon={ faStar } style={styles.star} size={ 26 } color={ 'gold' } />
                     </TouchableOpacity>
@@ -52,7 +69,7 @@ export default function ScreenMap({data, handleFavoriteClick}) {
                 </View>
               </Callout>
             </Marker>
-            );
+            ) : <></>
           })
         }
       </MapView>
