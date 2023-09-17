@@ -1,10 +1,11 @@
+import React, { useState, useEffect } from "react";
 import { StatusBar } from 'expo-status-bar';
-import { ScrollView, StyleSheet, Text, TouchableWithoutFeedback, View} from 'react-native';
-import { useState } from 'react';
+import { ScrollView, StyleSheet, Text, TouchableWithoutFeedback, View, Animate} from 'react-native';
 import { Card } from '@rneui/themed';
 import data from "./data.json"
 import ScreenMap from './Components/ScreenMap';
 import Header from './Components/Header';
+import SplashScreen from './Components/SplashScreen';
 import NewCharity from './Components/NewCharity';
 import AddButton from './Components/AddButton'
 import FavoriteList from './Components/FavoriteList';
@@ -15,6 +16,8 @@ export default function App() {
   const [showFavorites, setShowFavorites] = useState(false)
   const [favorites, setFavorites] = useState(new Set())
   const [filter, setFilter] = useState(null)
+  const [showSplash, setShowSplash] = useState(true)
+
 
   const toggleFavorites = () => {
     const newShowFavorites = !showFavorites;
@@ -30,6 +33,8 @@ export default function App() {
     }
     setFavorites(newFavorites);
   }
+  
+  SplashScreen.show ;
 
   const changeFilter = (newFilter) => {
     if (newFilter == filter) {
@@ -38,6 +43,27 @@ export default function App() {
     }
     setFilter(newFilter);
   }
+
+  const hideSplashScreen = () => {
+    setShowSplash(false);
+  }
+
+
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      // SplashScreen.show ;
+      hideSplashScreen();
+    }, 3000); // 10 seconds
+  
+
+    return () => clearTimeout(timeoutId);
+  
+  }, []);
+
+  if (showSplash) {
+    return <SplashScreen />;
+  }
+  
 
   return (
     <View style={styles.container}>

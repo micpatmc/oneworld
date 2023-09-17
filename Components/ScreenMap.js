@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; 
 import MapView, { Marker, Callout, Linking } from 'react-native-maps';
 import { StyleSheet, View, Text, Image, TouchableOpacity, ScrollView } from 'react-native';
 import { faStar } from "@fortawesome/free-solid-svg-icons";
