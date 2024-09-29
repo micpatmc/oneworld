@@ -1,5 +1,5 @@
 # The Process Behind OneWorld
-[https://devpost.com/software/oneworld](https://devpost.com/software/oneworld-8v1o6s)
+[Devpost](https://devpost.com/software/oneworld-8v1o6s)
 
 ![OneWorld Banner](https://i.imgur.com/kC6hmnH.png)
 ![OneWorld Icons](https://i.imgur.com/YvhrZie.png)
