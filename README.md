@@ -24,7 +24,7 @@ We were able to adhere to the plan we set out in the beginning fairly well and m
 ## What we learned
 Throughout this project, members of our team were able to learn **React Native,  JavaScript, JSON, GitHub, Trello, Expo testing, and API Requests.**
 
-## What's next for InfoVenture
+## What's next for OneWorld
 Moving forward we love to have the opportunity to do the following:
 - Expand our repository of preloaded  charities to accommodate for more people's interests
 - Include more filters for more niche kinds of charitable organizations
